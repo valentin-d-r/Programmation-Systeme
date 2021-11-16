@@ -8,6 +8,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		CoucouValentinLeplusbeau.txt = CoucouValentinLeplusbeau.txt
 		Explication.txt = Explication.txt
 		README.md = README.md
+		GITSOLUTION.sln = GITSOLUTION.sln
+		test.txt = test.txt
+		AymerickWorkShop.cpp = AymerickWorkShop.cpp
 	EndProjectSection
 EndProject
 Global
@@ -20,5 +23,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F78D915-EA05-4819-BCD2-487D523A0E59}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
