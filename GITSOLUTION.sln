@@ -5,25 +5,20 @@ VisualStudioVersion = 16.0.810.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2231EF02-0555-434A-B452-6A31310E2AD1}"
 	ProjectSection(SolutionItems) = preProject
+		AymerickWorkShop.cpp = AymerickWorkShop.cpp
+		Class1.cs = Class1.cs
 		CoucouValentinLeplusbeau.txt = CoucouValentinLeplusbeau.txt
 		Explication.txt = Explication.txt
-		README.md = README.md
 		GITSOLUTION.sln = GITSOLUTION.sln
+		README.md = README.md
 		test.txt = test.txt
-		AymerickWorkShop.cpp = AymerickWorkShop.cpp
 	EndProjectSection
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F78D915-EA05-4819-BCD2-487D523A0E59}
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
