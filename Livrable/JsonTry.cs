@@ -9,8 +9,8 @@ namespace Livrable
         public string name { get; set; }
         public string source { get; set; }
         public string dest { get; set; }
-        public int taille { get; set; }
-        public double tempsave { get; set; }
+        public double Lenght { get; set; }
+        public double TimeForTheSave { get; set; }
 
 
 

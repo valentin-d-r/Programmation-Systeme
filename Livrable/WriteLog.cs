@@ -12,7 +12,7 @@ namespace Livrable
         public Save sauvegarde = new Save("Test", EnumStates.ACTIF, 10, 15);
         public string source;
         public string dest;
-        public int taille;
+        public double taille;
         public CalculLenght calculTaille = new CalculLenght();
         public CalculTime calculTemps;
         public double temps;
@@ -21,7 +21,7 @@ namespace Livrable
         {
             this.source = fichierSource;
             this.dest = fichierDest;
-            this.taille = this.source.Length;
+            this.taille = calculTaille.calculateFolderSize(source);
             calculTemps = new CalculTime(this.source, this.dest, EnumSave.COMPLET);
             this.temps = calculTemps.temps;
         }
@@ -36,8 +36,8 @@ namespace Livrable
                 log.name = sauvegarde.appellation;
                 log.dest = dest;
                 log.source = source;
-                log.taille = taille;
-                log.tempsave = temps;
+                log.Lenght = taille;
+                log.TimeForTheSave = temps;
                 string json = JsonConvert.SerializeObject(log);
 
                 string fileName = @"/Users/aymerick/Desktop/CESI/test.json";
@@ -46,7 +46,7 @@ namespace Livrable
                     
                     var options = new JsonSerializerOptions { WriteIndented = true };
                     string jsonString = System.Text.Json.JsonSerializer.Serialize(log, options);
-                    Console.WriteLine(jsonString);
+                    Console.Write(jsonString);
                     File.WriteAllText(@fileName, jsonString);
                 }
             }
