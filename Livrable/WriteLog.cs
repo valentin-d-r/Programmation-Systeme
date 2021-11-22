@@ -1,5 +1,10 @@
 ﻿using System;
 using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
+
 namespace Livrable
 {
     public class WriteLog
@@ -25,19 +30,24 @@ namespace Livrable
         {
             try
             {
-                string fileName = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Livrable1\Fichierlogs.txt";
+
+                JsonTry log = new JsonTry();
+                log.Date = Save.horodatage;
+                log.name = sauvegarde.appellation;
+                log.dest = dest;
+                log.source = source;
+                log.taille = taille;
+                log.tempsave = temps;
+                string json = JsonConvert.SerializeObject(log);
+
+                string fileName = @"/Users/aymerick/Desktop/CESI/test.json";
                 using (StreamWriter writer = new StreamWriter(@fileName, true))
                 {
-                    writer.WriteLine("{");
-                    writer.WriteLine("time : " + Save.horodatage);
-
-                    writer.WriteLine("name : " + this.sauvegarde.appellation);
-                    writer.WriteLine("source : " + this.source);
-                    writer.WriteLine("destination : " + this.dest);
-                    writer.WriteLine("taille : " + this.calculTaille.calculateFolderSize(this.source) + " octets");
-                    writer.WriteLine("temps sauvegarde : " + this.temps + " ms");
-                    writer.WriteLine("}");
-                    writer.WriteLine(" ");
+                    
+                    var options = new JsonSerializerOptions { WriteIndented = true };
+                    string jsonString = System.Text.Json.JsonSerializer.Serialize(log, options);
+                    Console.WriteLine(jsonString);
+                    File.WriteAllText(@fileName, jsonString);
                 }
             }
             catch (Exception exp)

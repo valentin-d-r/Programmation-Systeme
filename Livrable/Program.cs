@@ -10,14 +10,14 @@ namespace Livrable
             TemplateSave modele = new TemplateSave();
 
             Console.WriteLine("Fichier source ? : ");
-            string fichierSource = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\";
+            string fichierSource = @"/Users/aymerick/Desktop/CESI/Informatique";
             Console.WriteLine("Fichier destination ? : ");
-            string fichierDest = @"\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test";
+            string fichierDest = @"/Users/aymerick/Desktop/CESI/TEST2";
 
             WriteLog log = new WriteLog(fichierSource, fichierDest);
-
+           
             log.Write();
-
+            
 
 
 

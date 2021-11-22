@@ -11,3 +11,5 @@
 /Users/aymerick/Desktop/Reste/Programmation-Systeme/Livrable/obj/Debug/netcoreapp3.1/Livrable.dll
 /Users/aymerick/Desktop/Reste/Programmation-Systeme/Livrable/obj/Debug/netcoreapp3.1/Livrable.pdb
 /Users/aymerick/Desktop/Reste/Programmation-Systeme/Livrable/obj/Debug/netcoreapp3.1/Livrable.genruntimeconfig.cache
+/Users/aymerick/Desktop/Reste/Programmation-Systeme/Livrable/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/aymerick/Desktop/Reste/Programmation-Systeme/Livrable/obj/Debug/netcoreapp3.1/Livrable.csproj.CopyComplete
