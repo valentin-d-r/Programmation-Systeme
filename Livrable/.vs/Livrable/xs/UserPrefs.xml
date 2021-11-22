@@ -1,23 +1,24 @@
 ﻿<Properties StartupConfiguration="{AE2AB937-A83E-41F0-801C-7C2AE6690218}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CalculTime.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WriteLogsStates.cs">
     <Files>
       <File FileName="Program.cs" Line="21" Column="1" />
-      <File FileName="WriteLog.cs" Line="55" Column="14" />
-      <File FileName="Save.cs" Line="12" Column="65" />
+      <File FileName="WriteLog.cs" Line="43" Column="64" />
+      <File FileName="Save.cs" Line="11" Column="23" />
       <File FileName="EnumStates.cs" Line="11" Column="1" />
       <File FileName="TemplateSave.cs" Line="28" Column="1" />
-      <File FileName="CalculTime.cs" Line="21" Column="1" />
-      <File FileName="CalculLenght.cs" Line="9" Column="38" />
+      <File FileName="CalculTime.cs" Line="26" Column="2" />
+      <File FileName="CalculLenght.cs" Line="11" Column="10" />
       <File FileName="EnumLanguage.cs" Line="10" Column="1" />
       <File FileName="Software.cs" Line="25" Column="4" />
       <File FileName="JsonTry.cs" Line="12" Column="29" />
+      <File FileName="WriteLogsStates.cs" Line="6" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Livrable" expanded="True">
             <Node name="Livrable" expanded="True">
-              <Node name="CalculTime.cs" selected="True" />
+              <Node name="WriteLogsStates.cs" selected="True" />
             </Node>
           </Node>
         </State>
