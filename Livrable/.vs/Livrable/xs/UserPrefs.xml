@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{AE2AB937-A83E-41F0-801C-7C2AE6690218}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CalculTime.cs">
+    <Files>
+      <File FileName="Program.cs" Line="20" Column="1" />
+      <File FileName="WriteLog.cs" Line="8" Column="30" />
+      <File FileName="Save.cs" Line="16" Column="28" />
+      <File FileName="EnumStates.cs" Line="11" Column="1" />
+      <File FileName="TemplateSave.cs" Line="53" Column="1" />
+      <File FileName="CalculTime.cs" Line="32" Column="1" />
+      <File FileName="EnumSave.cs" Line="4" Column="25" />
+      <File FileName="CalculLenght.cs" Line="29" Column="1" />
+      <File FileName="EnumLanguage.cs" Line="10" Column="1" />
+      <File FileName="Software.cs" Line="25" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Livrable" expanded="True">
+            <Node name="Livrable" expanded="True">
+              <Node name="CalculTime.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Livrable PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
