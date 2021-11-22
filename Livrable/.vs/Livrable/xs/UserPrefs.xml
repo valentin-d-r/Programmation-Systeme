@@ -1,24 +1,23 @@
 ﻿<Properties StartupConfiguration="{AE2AB937-A83E-41F0-801C-7C2AE6690218}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="JsonTry.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CalculTime.cs">
     <Files>
-      <File FileName="Program.cs" Line="19" Column="12" />
-      <File FileName="WriteLog.cs" Line="28" Column="1" />
-      <File FileName="Save.cs" Line="16" Column="28" />
+      <File FileName="Program.cs" Line="21" Column="1" />
+      <File FileName="WriteLog.cs" Line="55" Column="14" />
+      <File FileName="Save.cs" Line="12" Column="65" />
       <File FileName="EnumStates.cs" Line="11" Column="1" />
-      <File FileName="TemplateSave.cs" Line="54" Column="1" />
-      <File FileName="CalculTime.cs" Line="32" Column="1" />
-      <File FileName="EnumSave.cs" Line="4" Column="25" />
-      <File FileName="CalculLenght.cs" Line="29" Column="1" />
+      <File FileName="TemplateSave.cs" Line="28" Column="1" />
+      <File FileName="CalculTime.cs" Line="21" Column="1" />
+      <File FileName="CalculLenght.cs" Line="9" Column="38" />
       <File FileName="EnumLanguage.cs" Line="10" Column="1" />
       <File FileName="Software.cs" Line="25" Column="4" />
-      <File FileName="JsonTry.cs" Line="8" Column="60" />
+      <File FileName="JsonTry.cs" Line="12" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Livrable" expanded="True">
             <Node name="Livrable" expanded="True">
-              <Node name="JsonTry.cs" selected="True" />
+              <Node name="CalculTime.cs" selected="True" />
             </Node>
           </Node>
         </State>

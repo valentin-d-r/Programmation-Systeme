@@ -4,7 +4,7 @@ namespace Livrable
     public enum EnumStates
     {
         ENCOURS,
-        ACTIF,
+        END,
         NONACTIF,
     }
 }

@@ -7,15 +7,20 @@ namespace Livrable
 		public static DateTime horodatage;
 		public EnumStates etat = new EnumStates();
 		public int nbFichiersEligibles;
-		public int tailleFichiers;
+		public double tailleFichiers;
+		public string source;
+		public string dest;
+		CalculLenght calculTaille = new CalculLenght();
 
-		public Save(string appellationADonner, EnumStates etatADonner, int nbFichiersADonner, int tailleADonner)
+		public Save(string appellationADonner, string source, string dest)
 		{
+			this.source = source;
+			this.dest = dest;
 			this.appellation = appellationADonner;
 			horodatage = DateTime.Now;
-			this.etat = etatADonner;
-			this.nbFichiersEligibles = nbFichiersADonner;
-			this.tailleFichiers = tailleADonner;
+			this.etat = EnumStates.NONACTIF;
+			this.nbFichiersEligibles = calculTaille.numberfichier;
+			this.tailleFichiers = calculTaille.calculateFolderSize(source);
 		}
 	}
 }

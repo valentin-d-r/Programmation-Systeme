@@ -9,7 +9,7 @@ namespace Livrable
 {
     public class WriteLog
     {
-        public Save sauvegarde = new Save("Test", EnumStates.ACTIF, 10, 15);
+        public Save sauvegarde;//CREER LA SAUVEGARDE EN ATTENDANT QUE LUILISATEUR LE FASSE
         public string source;
         public string dest;
         public double taille;
@@ -17,12 +17,14 @@ namespace Livrable
         public CalculTime calculTemps;
         public double temps;
 
-        public WriteLog(string fichierSource, string fichierDest)
+
+        public WriteLog(string fichierSource, string fichierDest)//construct a log with a source, a destination, a length and a time
         {
+            this.sauvegarde = new Save("Test", fichierSource, fichierDest);
             this.source = fichierSource;
             this.dest = fichierDest;
-            this.taille = calculTaille.calculateFolderSize(source);
-            calculTemps = new CalculTime(this.source, this.dest, EnumSave.COMPLET);
+            this.taille = this.sauvegarde.tailleFichiers;
+            calculTemps = new CalculTime(this.sauvegarde);
             this.temps = calculTemps.temps;
         }
 

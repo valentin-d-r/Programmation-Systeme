@@ -5,6 +5,7 @@ namespace Livrable
 {
     public class CalculLenght
     {
+        public int numberfichier;
 
      public float calculateFolderSize(string folder)
         {
@@ -22,6 +23,7 @@ namespace Livrable
                         {
                             if (File.Exists(file))
                             {
+                                numberfichier++;
                                 FileInfo finfo = new FileInfo(file);
                                 folderSize += finfo.Length;
                             }

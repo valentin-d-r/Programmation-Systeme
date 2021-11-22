@@ -10,20 +10,15 @@ namespace Livrable
             TemplateSave modele = new TemplateSave();
 
             Console.WriteLine("Fichier source ? : ");
+            //Console.ReadLine();
             string fichierSource = @"/Users/aymerick/Desktop/CESI/Informatique";
             Console.WriteLine("Fichier destination ? : ");
+            //Console.ReadLine();
             string fichierDest = @"/Users/aymerick/Desktop/CESI/TEST2";
 
             WriteLog log = new WriteLog(fichierSource, fichierDest);
-           
             log.Write();
-            
 
-
-
-
-            // "\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\CER\"
-            // "\Users\leper\Documents\CESI\Informatique\02-ProgrammationSysteme\Test"
         }
     }
 }
