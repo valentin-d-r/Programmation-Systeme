@@ -48,7 +48,9 @@ namespace Livrable
                     
                     var options = new JsonSerializerOptions { WriteIndented = true };
                     string jsonString = System.Text.Json.JsonSerializer.Serialize(log, options);
+                    Console.Write("--- Affichage du log ----\n");
                     Console.Write(jsonString);
+                    Console.Write("\n--------\n");
                     File.WriteAllText(@fileName, jsonString);
                 }
             }
