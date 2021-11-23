@@ -2,17 +2,17 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
       <File FileName="Program.cs" Line="16" Column="1" />
-      <File FileName="WriteLog.cs" Line="16" Column="30" />
-      <File FileName="Save.cs" Line="11" Column="23" />
-      <File FileName="EnumStates.cs" Line="11" Column="1" />
-      <File FileName="TemplateSave.cs" Line="28" Column="1" />
-      <File FileName="CalculTime.cs" Line="26" Column="2" />
-      <File FileName="CalculLenght.cs" Line="11" Column="10" />
-      <File FileName="JsonTry.cs" Line="12" Column="17" />
-      <File FileName="WriteLogsStates.cs" Line="27" Column="31" />
+      <File FileName="WriteLog.cs" />
+      <File FileName="Save.cs" />
+      <File FileName="EnumStates.cs" />
+      <File FileName="TemplateSave.cs" />
+      <File FileName="CalculTime.cs" />
+      <File FileName="CalculLenght.cs" />
+      <File FileName="JsonTry.cs" />
+      <File FileName="WriteLogsStates.cs" />
       <File FileName="Livrable.csproj" />
-      <File FileName="JSONStates.cs" Line="14" Column="2" />
-      <File FileName="0To5.cs" Line="76" Column="51" />
+      <File FileName="JSONStates.cs" />
+      <File FileName="0To5.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

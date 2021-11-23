@@ -37,9 +37,9 @@ namespace Livrable
 
                 JsonTry log = new JsonTry();
                 log.Date = Save.horodatage;
-                log.name = save.appellation;
-                log.dest = dest;
-                log.source = source;
+                log.Name = save.appellation;
+                log.destinationFile = dest;
+                log.sourceFile = source;
                 log.Lenght = taille;
                 log.TimeForTheSave = temps;
                 string json = JsonConvert.SerializeObject(log);

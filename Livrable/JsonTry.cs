@@ -6,9 +6,9 @@ namespace Livrable
     public class JsonTry
     {
         public DateTimeOffset Date { get; set; }
-        public string name { get; set; }
-        public string source { get; set; }
-        public string dest { get; set; }
+        public string Name { get; set; }
+        public string sourceFile { get; set; }
+        public string destinationFile { get; set; }
         public double Lenght { get; set; }
         public double TimeForTheSave { get; set; }
 
