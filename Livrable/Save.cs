@@ -11,6 +11,9 @@ namespace Livrable
 		public string source;
 		public string dest;
 		CalculLenght calculTaille = new CalculLenght();
+		public int backup;
+		public float tailledest;
+
 
 		public Save(string appellationADonner, string source, string dest)
 		{
@@ -21,6 +24,14 @@ namespace Livrable
 			this.etat = EnumStates.NONACTIF;
 			this.nbFichiersEligibles = calculTaille.numberfichier;
 			this.tailleFichiers = calculTaille.calculateFolderSize(source);
+			this.tailledest = calculTaille.calculateFolderSize(dest);
+			if (tailleFichiers != tailledest)
+			{
+				this.backup = 1;
+			}else
+			{
+				this.backup = 0;
+			}
 		}
 	}
 }

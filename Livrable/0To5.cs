@@ -70,13 +70,15 @@ namespace Livrable
                     Console.WriteLine("What do you want to call your backup?"); // Save's name?
                     name = Console.ReadLine(); // We grab the name, thanks to the console.
                     Console.WriteLine("Source File ? : ");
-                    string fichierSource = Console.ReadLine();
-                    //string fichierSource = @"/Users/aymerick/Desktop/CESI/Informatique";
+                    //string fichierSource = Console.ReadLine();
+                    string fichierSource = @"/Users/aymerick/Desktop/CESI/Informatique";
                     Console.WriteLine("Destination file ? : ");
-                    string fichierDest = Console.ReadLine();
-                    //string fichierDest = @"/Users/aymerick/Desktop/CESI/TEST2";
+                    //string fichierDest = Console.ReadLine();
+                    string fichierDest = @"/Users/aymerick/Desktop/CESI/TEST2";
 
                     WriteLog log = new WriteLog(fichierSource, fichierDest,name);
+                    WriteLogsStates log2 = new WriteLogsStates(fichierSource, fichierDest, name);
+                    log2.write();
                     log.Write(); // Launch the write function, of the WriteLog class, to write the logs
                     nombre++; //We increase the number of saves to + 1
                     Console.WriteLine("\r\n");
