@@ -11,7 +11,6 @@ namespace Livrable
 		public string source;
 		public string dest;
 		CalculLenght calculTaille = new CalculLenght();
-		public int backup;
 		public float tailledest;
 
 
@@ -25,13 +24,7 @@ namespace Livrable
 			this.nbFichiersEligibles = calculTaille.numberfichier;
 			this.tailleFichiers = calculTaille.calculateFolderSize(source);
 			this.tailledest = calculTaille.calculateFolderSize(dest);
-			if (tailleFichiers != tailledest)
-			{
-				this.backup = 1;
-			}else
-			{
-				this.backup = 0;
-			}
+			if (tailleFichiers != tailledest) ;
 		}
 	}
 }
