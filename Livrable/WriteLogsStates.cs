@@ -36,12 +36,12 @@ namespace Livrable
         public void write()
         {
 
-            JSONStates log = new JSONStates();
+                JSONStates log = new JSONStates();
                 log.Date = Save.horodatage;
                 log.Name = save.appellation;
                 log.destinationFile = dest;
                 log.sourceFile = source;
-                log.states = save.backup;
+                log.states = (int)save.etat;
                string json = JsonConvert.SerializeObject(log);
 
                 string fileName = @"/Users/aymerick/Desktop/CESI/test2.json";
