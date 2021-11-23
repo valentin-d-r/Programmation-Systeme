@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{AE2AB937-A83E-41F0-801C-7C2AE6690218}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WriteLog.cs">
     <Files>
       <File FileName="Program.cs" Line="16" Column="1" />
-      <File FileName="WriteLog.cs" />
+      <File FileName="WriteLog.cs" Line="40" Column="36" />
       <File FileName="Save.cs" />
       <File FileName="EnumStates.cs" />
       <File FileName="TemplateSave.cs" />
@@ -19,7 +19,7 @@
         <State name="__root__">
           <Node name="Livrable" expanded="True">
             <Node name="Livrable" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="WriteLog.cs" selected="True" />
             </Node>
           </Node>
         </State>

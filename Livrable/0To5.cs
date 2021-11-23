@@ -6,6 +6,7 @@ namespace Livrable
         public int start = 1;
         public int final=1;
         public int nombre;
+        public string name;
         public string language;
         public void Programme()
         {
@@ -31,18 +32,21 @@ namespace Livrable
             {
                 // Copie du repertoire, y compris, ces repertoires enfants
                 TemplateSave modele = new TemplateSave();
-                
+                Console.WriteLine("Comment voulez vous appelé votre sauvegarde?");
+                name = Console.ReadLine();
                 Console.WriteLine("Fichier source ? : ");
-                //Console.ReadLine();
-                string fichierSource = @"/Users/aymerick/Desktop/CESI/Informatique";
+                string fichierSource = Console.ReadLine();
+                //@"/Users/aymerick/Desktop/CESI/Informatique";
                 Console.WriteLine("Fichier destination ? : ");
-                //Console.ReadLine();
-                string fichierDest = @"/Users/aymerick/Desktop/CESI/TEST2";
+                string fichierDest = Console.ReadLine();
+                //@"/Users/aymerick/Desktop/CESI/TEST2";
 
-                WriteLog log = new WriteLog(fichierSource, fichierDest); 
+                WriteLog log = new WriteLog(fichierSource, fichierDest,name); 
                 log.Write(); // Lancement de la fonction write, de la classe WriteLog, pour écrire les logs
                 nombre++; // On augmente le nombre de save à +1
+                    Console.WriteLine("\r\n");
                     Console.WriteLine("Console : SUCCESS");
+                    Console.WriteLine("\r\n");
 
                 }
 
@@ -63,18 +67,21 @@ namespace Livrable
                 {
                     // Copy from the current directory, include subdirectories.
                     TemplateSave modele = new TemplateSave();
-
+                    Console.WriteLine("What do you want to call your backup?"); // Save's name?
+                    name = Console.ReadLine(); // We grab the name, thanks to the console.
                     Console.WriteLine("Source File ? : ");
-                    //Console.ReadLine();
-                    string fichierSource = @"/Users/aymerick/Desktop/CESI/Informatique";
+                    string fichierSource = Console.ReadLine();
+                    //string fichierSource = @"/Users/aymerick/Desktop/CESI/Informatique";
                     Console.WriteLine("Destination file ? : ");
-                    //Console.ReadLine();
-                    string fichierDest = @"/Users/aymerick/Desktop/CESI/TEST2";
+                    string fichierDest = Console.ReadLine();
+                    //string fichierDest = @"/Users/aymerick/Desktop/CESI/TEST2";
 
-                    WriteLog log = new WriteLog(fichierSource, fichierDest);
+                    WriteLog log = new WriteLog(fichierSource, fichierDest,name);
                     log.Write(); // Launch the write function, of the WriteLog class, to write the logs
                     nombre++; //We increase the number of saves to + 1
+                    Console.WriteLine("\r\n");
                     Console.WriteLine("Console : SUCCESS");
+                    Console.WriteLine("\r\n");
 
                 }
                

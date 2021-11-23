@@ -20,9 +20,9 @@ namespace Livrable
         List<JsonTry> listJSON = new List<JsonTry>();
 
 
-        public WriteLog(string fichierSource, string fichierDest)//construct a log with a source, a destination, a length and a time
+        public WriteLog(string fichierSource, string fichierDest, string name)//construct a log with a source, a destination, a length and a time
         {
-            this.save = new Save("Test", fichierSource, fichierDest);
+            this.save = new Save(name, fichierSource, fichierDest);
             this.source = fichierSource;
             this.dest = fichierDest;
             this.taille = this.save.tailleFichiers;
