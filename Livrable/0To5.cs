@@ -10,48 +10,48 @@ namespace Livrable
         public string language;
         public void Programme()
         {
-            // Choix de la langue
+            // Choice of language
             Console.WriteLine("Language ? FR or EN");
-            language = Console.ReadLine();
+            language = Console.ReadLine(); // We Grab the answer 
 
 
             // --- LANGUE FR --- // 
-            if (language == "FR")
+            if (language == "FR") // If the answer was FR
             {
                 nombre = start;
-                Console.WriteLine("Combien de fichier, voulez vous sauvegardé?");
-                Console.WriteLine("(max 5fichiers)");
-                final = Convert.ToInt32(Console.ReadLine());
-                if (final > 5) // SI travaux >5 arret du programme
+                Console.WriteLine("Combien de fichier, voulez vous sauvegardé?"); // We Write into the console to have, the answer about how much save the user want to do
+                Console.WriteLine("(max 5fichiers)"); // We write the maximum
+                final = Convert.ToInt32(Console.ReadLine()); // We Grab the answer
+                if (final > 5) // If the anwer is more than 5
                 {
-                    string fin = "Fin du programme, travaux de sauvegarde trop élévé";
-                    Console.WriteLine(fin);
-                    final = 0;
+                    // We write into the console, it have an error, to much save 
+                    Console.WriteLine("Fin du programme, travaux de sauvegarde trop élévé");
+                    final = 0;// End of the program
                 } 
-                while (nombre < final+1) // Tant que le le nombre de save est plus petit que le nombre entrée il faut autant de save.
-            {
-                // Copie du repertoire, y compris, ces repertoires enfants
+                while (nombre < final+1) // As long as the number of saves is smaller than the number entered, the same number of saves is required.
+                {
+                    // Copy of the directory, including, these child directories
                 TemplateSave modele = new TemplateSave();
-                Console.WriteLine("Comment voulez vous appelé votre sauvegarde?");
-                name = Console.ReadLine();
-                Console.WriteLine("Fichier source ? : ");
-                string fichierSource = Console.ReadLine();
-                //@"/Users/aymerick/Desktop/CESI/Informatique";
-                Console.WriteLine("Fichier destination ? : ");
-                string fichierDest = Console.ReadLine();
-                //@"/Users/aymerick/Desktop/CESI/TEST2";
-
-                WriteLog log = new WriteLog(fichierSource, fichierDest,name); 
-                log.Write(); // Lancement de la fonction write, de la classe WriteLog, pour écrire les logs
-                nombre++; // On augmente le nombre de save à +1
-                    Console.WriteLine("\r\n");
-                    Console.WriteLine("Console : SUCCESS");
-                    Console.WriteLine("\r\n");
+                Console.WriteLine("Comment voulez vous appelé votre sauvegarde?"); // We write into the console, how the user want to call the save?
+                name = Console.ReadLine(); // We grab the answer
+                Console.WriteLine("Fichier source ? : "); // We ask to the user, the source file
+                string fichierSource = Console.ReadLine();// We Grab the answer
+                //@"/Users/aymerick/Desktop/CESI/Informatique"; // Used only to the dev of the application.
+                Console.WriteLine("Fichier destination ? : ");// We ask to the user, the dest file
+                string fichierDest = Console.ReadLine();// We Grab the answer
+                //@"/Users/aymerick/Desktop/CESI/TEST2";// Used only to the dev of the application.
+                WriteLogsStates log2 = new WriteLogsStates(fichierSource, fichierDest, name); // We write in the State logs
+                WriteLog log = new WriteLog(fichierSource, fichierDest,name); //We write in the logs
+                log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
+                nombre++; //We increase the number of saves to +1
+                Console.WriteLine("\r\n");
+                Console.WriteLine("Console : SUCESS"); // If the save is good, we write into the console "SUCESS"
+                Console.WriteLine("\r\n"); // Line crossing
 
                 }
 
             // --- LANGUE EN --- // 
-            }else if(language=="EN")
+            }else if(language=="EN") //All comment are the same for EN and FR
             {
                 nombre = start;
                 Console.WriteLine("How much file, do u want to save?");
@@ -76,8 +76,8 @@ namespace Livrable
                     //string fichierDest = Console.ReadLine();
                     string fichierDest = @"/Users/aymerick/Desktop/CESI/TEST2";
 
-                    WriteLog log = new WriteLog(fichierSource, fichierDest,name);
-                    WriteLogsStates log2 = new WriteLogsStates(fichierSource, fichierDest, name);
+                    WriteLog log = new WriteLog(fichierSource, fichierDest,name); //We write in the logs
+                    WriteLogsStates log2 = new WriteLogsStates(fichierSource, fichierDest, name); // We write in the State logs
                     log2.write();
                     log.Write(); // Launch the write function, of the WriteLog class, to write the logs
                     nombre++; //We increase the number of saves to + 1
