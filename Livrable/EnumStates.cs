@@ -3,8 +3,8 @@ namespace Livrable
 {
     public enum EnumStates
     {
-        ENCOURS,
-        END,
-        NONACTIF,
+        END, // 0 
+        ENCOURS, // 1 
+        NONACTIF, // 2 
     }
 }

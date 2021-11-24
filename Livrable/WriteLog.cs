@@ -30,12 +30,12 @@ namespace Livrable
             this.temps = calculTemps.temps;
         }
 
-        public void Write()
+        public void Write() // Method Write
         {
             try
             {
 
-                JsonTry log = new JsonTry();
+                JsonTry log = new JsonTry();// We attribute all of our values thank to the classe JsonTry
                 log.Date = Save.horodatage;
                 log.Name = save.appellation;
                 log.destinationFile = dest;
@@ -44,26 +44,26 @@ namespace Livrable
                 log.TimeForTheSave = temps;
                 string json = JsonConvert.SerializeObject(log);
 
-                string fileName = @"/Users/aymerick/Desktop/CESI/test.json";
+                string fileName = @"/Users/log.json"; // Location of the log file
 
 
-                if (!File.Exists(fileName))
+                if (!File.Exists(fileName)) // If the file log doesn't existe
                 {
-                    listJSON.Add(log);
+                    listJSON.Add(log);// We add to the list all information about log (JsonTry L.38)
                     var options = new JsonSerializerOptions { WriteIndented = true };
-                    string jsonString = System.Text.Json.JsonSerializer.Serialize(listJSON, options);
-                    File.WriteAllText(@fileName, jsonString);
+                    string jsonString = System.Text.Json.JsonSerializer.Serialize(listJSON, options);//Used to serialize the list 'ListJSON' in JSON format into jsonString
+                    File.WriteAllText(@fileName, jsonString); // Write to file "fileName" all thing into jsonString
                 }
-                else
+                else // If the file log existe
                 {
                     StreamReader r = new StreamReader(fileName);
-                    string jsonString2 = r.ReadToEnd();
-                    r.Close();
-                    List<JsonTry> m = JsonConvert.DeserializeObject<List<JsonTry>>(jsonString2);
-                    m.Add(log);
+                    string jsonString2 = r.ReadToEnd();//We put in the JsonString2 variable, all the content of the FileName file in json
+                    r.Close();// We close the file
+                    List<JsonTry> m = JsonConvert.DeserializeObject<List<JsonTry>>(jsonString2);// We put the content of the file in the new list, deserialize.That is to say, we change the format.
+                    m.Add(log); // We add to the list all information about log (JsonTry L.38)
                     var options = new JsonSerializerOptions { WriteIndented = true };
-                    string jsonString3 = System.Text.Json.JsonSerializer.Serialize(m, options);
-                    File.WriteAllText(@fileName, jsonString3);
+                    string jsonString3 = System.Text.Json.JsonSerializer.Serialize(m, options); //Used to serialize the list 'm' in JSON format into jsonString3
+                    File.WriteAllText(@fileName, jsonString3);// Write to file "fileName" all thing into jsonString3
                 }
             }
             catch (Exception exp)
