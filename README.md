@@ -60,4 +60,5 @@ Non Actif : 2
 
 **Les fichier Logs et LogStates,** se trouve par défault dans le chemin ci contre : C:/Users/
  **Attention**, ce but de ce logiciel est la **sauvegarde** des **fichiers**, et non l'**archivage**. Le fichier **source**, ne sera donc pas **supprimé** après la **sauvegarde**.
+
 **ProSoft CopyRight 2021**
