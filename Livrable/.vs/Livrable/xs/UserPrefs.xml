@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{AE2AB937-A83E-41F0-801C-7C2AE6690218}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="0To5.cs">
+    <Files>
+      <File FileName="Program.cs" Line="16" Column="1" />
+      <File FileName="WriteLog.cs" />
+      <File FileName="Save.cs" />
+      <File FileName="EnumStates.cs" />
+      <File FileName="TemplateSave.cs" />
+      <File FileName="CalculTime.cs" />
+      <File FileName="CalculLenght.cs" />
+      <File FileName="JsonTry.cs" />
+      <File FileName="WriteLogsStates.cs" />
+      <File FileName="Livrable.csproj" />
+      <File FileName="JSONStates.cs" />
+      <File FileName="0To5.cs" Line="94" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Livrable" expanded="True">
+            <Node name="Livrable" expanded="True">
+              <Node name="0To5.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Livrable PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
