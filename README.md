@@ -22,10 +22,13 @@ Ainsi, vous pourrez facilement retrouvé une sauvegarde exécuté avec t-elle no
 ## Sauvegarde (Dossier Source/Destination)
 Après avoir entré le nom de votre sauvegarde, vous devrez entré le chemin source de votre dossier que vous souhaitez sauvegardé. Ensuite, vous serez invité à entré le chemin du fichier de destination.
 Pour celà, il suffit de : 
+
   **- MAC OS :**
     _Vous devez impérativement 'Lire les informations' du dossier, puis copié le chemin. Pour ensuite le collé dans le terminal._
+    
   **- Windows** : 
     _Vous pouvez glissé le fichier dans le terminal._
+    
 **EasySave** inlu la sauvegarde de dossiers sur : 
 - Des disques locaux
 - Des disques Externes
