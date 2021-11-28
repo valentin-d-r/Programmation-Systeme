@@ -43,10 +43,13 @@ namespace Livrable
                 WriteLogsStates log2 = new WriteLogsStates(fichierSource, fichierDest, name); // We write in the State logs
                 WriteLog log = new WriteLog(fichierSource, fichierDest,name); //We write in the logs
                 log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
+                log2.write();
                 nombre++; //We increase the number of saves to +1
                 Console.WriteLine("\r\n");
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Console : SUCESS"); // If the save is good, we write into the console "SUCESS"
                 Console.WriteLine("\r\n"); // Line crossing
+                    Console.ReadLine();
 
                 }
 
@@ -70,11 +73,11 @@ namespace Livrable
                     Console.WriteLine("What do you want to call your backup?"); // Save's name?
                     name = Console.ReadLine(); // We grab the name, thanks to the console.
                     Console.WriteLine("Source File ? : ");
-                    //string fichierSource = Console.ReadLine();
-                    string fichierSource = @"/Users/aymerick/Desktop/CESI/Informatique";
+                    string fichierSource = Console.ReadLine();
+                    //string fichierSource = @"/Users/aymerick/Desktop/CESI/Informatique";
                     Console.WriteLine("Destination file ? : ");
-                    //string fichierDest = Console.ReadLine();
-                    string fichierDest = @"/Users/aymerick/Desktop/CESI/TEST2";
+                    string fichierDest = Console.ReadLine();
+                    //string fichierDest = @"/Users/aymerick/Desktop/CESI/TEST2";
 
                     WriteLog log = new WriteLog(fichierSource, fichierDest,name); //We write in the logs
                     WriteLogsStates log2 = new WriteLogsStates(fichierSource, fichierDest, name); // We write in the State logs
@@ -82,8 +85,10 @@ namespace Livrable
                     log.Write(); // Launch the write function, of the WriteLog class, to write the logs
                     nombre++; //We increase the number of saves to + 1
                     Console.WriteLine("\r\n");
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Console : SUCCESS");
                     Console.WriteLine("\r\n");
+                    Console.ReadLine();
 
                 }
                

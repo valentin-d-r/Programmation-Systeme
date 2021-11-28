@@ -44,7 +44,7 @@ namespace Livrable
                 log.TimeForTheSave = temps;
                 string json = JsonConvert.SerializeObject(log);
 
-                string fileName = @"/Users/log.json"; // Location of the log file
+                string fileName = @"/Users/aymerick/Desktop/CESI/test.json"; // Location of the log file
 
 
                 if (!File.Exists(fileName)) // If the file log doesn't existe
