@@ -5,7 +5,8 @@ namespace Livrable
     public class TemplateSave
     {
     public int comp;
-    public void SaveAll(string sourceDirName, string destDirName, bool copySubDirs)
+        public bool canCopy = true;
+    public bool SaveAll(string sourceDirName, string destDirName, bool copySubDirs)
     {
 
         // Get the subdirectories for the specified directory.
@@ -33,10 +34,19 @@ namespace Livrable
         FileInfo[] files = dir.GetFiles();
         foreach (FileInfo file in files)
         {
-            string tempPath = Path.Combine(destDirName, file.Name);
-            file.CopyTo(tempPath, false);
+                if (file.Extension == ".plist") // MERCI MAC QUI POUR .APP = .PLIST ???? 
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine("Présence d'un logiciel ! Sauvegarde INTERDITE");
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    canCopy = false;
+                    Directory.Delete(destDirName,true);
+                    return canCopy;
+                }
+                    string tempPath = Path.Combine(destDirName, file.Name);
+                    file.CopyTo(tempPath, false);
+                    
         }
-
         // If copying subdirectories, copy them and their contents to new location.
         if (copySubDirs)
         {
@@ -46,6 +56,7 @@ namespace Livrable
                 SaveAll(subdir.FullName, tempPath, copySubDirs);
             }
         }
+            return canCopy;
     }
 }
 }
