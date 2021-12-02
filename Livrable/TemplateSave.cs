@@ -5,7 +5,7 @@ namespace Livrable
     public class TemplateSave
     {
     public int comp;
-        public bool canCopy = true;
+        public bool Copy = true;
     public bool SaveAll(string sourceDirName, string destDirName, bool copySubDirs)
     {
 
@@ -39,9 +39,9 @@ namespace Livrable
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine("Présence d'un logiciel ! Sauvegarde INTERDITE");
                     Console.ForegroundColor = ConsoleColor.Black;
-                    canCopy = false;
+                    Copy = false;
                     Directory.Delete(destDirName,true);
-                    return canCopy;
+                    return Copy;
                 }
                     string tempPath = Path.Combine(destDirName, file.Name);
                     file.CopyTo(tempPath, false);
@@ -56,7 +56,7 @@ namespace Livrable
                 SaveAll(subdir.FullName, tempPath, copySubDirs);
             }
         }
-            return canCopy;
+            return Copy;
     }
 }
 }
