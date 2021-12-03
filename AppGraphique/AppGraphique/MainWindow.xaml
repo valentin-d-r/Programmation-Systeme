@@ -1,0 +1,20 @@
+﻿<Window x:Class="AppGraphique.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppGraphique"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="381" Width="800">
+    <Grid Margin="0,-51,0,0" RenderTransformOrigin="0.504,0.526" Background="Black">
+        <Button Content="Lancer" HorizontalAlignment="Left" Margin="625,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FFFFA31A"/>
+        <TextBox HorizontalAlignment="Left" Margin="230,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="38" Background="#FFFFA31A"/>
+        <TextBox HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFFA31A"/>
+        <TextBox HorizontalAlignment="Left" Margin="230,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" TextChanged="TextBox_TextChanged" Background="#FFFFA31A"/>
+        <RadioButton Content="Cryptage" HorizontalAlignment="Left" Margin="64,374,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <RadioButton Content="Décryptage" HorizontalAlignment="Left" Margin="230,371,0,0" VerticalAlignment="Top" Background="White" OpacityMask="#FFA06F33" Foreground="White"/>
+        <TextBox HorizontalAlignment="Left" Margin="31,82,0,0" Text="Appelation" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.325,0.522" Height="38" TextChanged="TextBox_TextChanged_1" Background="#FFFFA31A"/>
+        <TextBox HorizontalAlignment="Left" Margin="31,160,0,0" Text="Source" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Height="48" TextChanged="TextBox_TextChanged_2" Background="#FFFFA31A"/>
+        <TextBox HorizontalAlignment="Left" Margin="31,247,0,0" Text="Destination" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Height="48" TextChanged="TextBox_TextChanged_1" Background="#FFFFA31A"/>
+    </Grid>
+</Window>
