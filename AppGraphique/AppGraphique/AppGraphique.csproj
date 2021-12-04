@@ -12,6 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="easySave.png" />
     <Resource Include="easysaveph.png" />
   </ItemGroup>

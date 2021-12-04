@@ -8,15 +8,16 @@
         Title="Window2" Height="450" Width="800">
     <Grid Margin="0,-51,0,0" RenderTransformOrigin="0.504,0.526" Background="Black">
         <Button Content="Launch" HorizontalAlignment="Left" Margin="625,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FFFFA31A" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFFA31A"/>
-        <TextBox HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFFA31A"/>
-        <TextBox HorizontalAlignment="Left" Margin="230,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFFA31A"/>
+        <TextBox HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFFA31A" Foreground="White"/>
+        <TextBox x:Name="TextboxSourceEng" HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFFA31A" Foreground="White"/>
+        <TextBox x:Name="TextboxDestinationEng" HorizontalAlignment="Left" Margin="230,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFFA31A" Foreground="White"/>
         <RadioButton Content="Encryption" HorizontalAlignment="Left" Margin="31,374,0,0" VerticalAlignment="Top" Foreground="White"/>
         <RadioButton Content="Decoding" HorizontalAlignment="Left" Margin="230,371,0,0" VerticalAlignment="Top" Background="White" OpacityMask="#FFA06F33" Foreground="White"/>
-        <Button Content="..." HorizontalAlignment="Left" Margin="605,188,0,0" VerticalAlignment="Top" Width="21" Background="#FFFFA31A" Foreground="White"/>
-        <Button Content="..." HorizontalAlignment="Left" Margin="605,275,0,0" VerticalAlignment="Top"  Width="21" Background="#FFFFA31A" Foreground="White"/>
+        <Button x:Name="Source3points" Content="..." HorizontalAlignment="Left" Margin="605,188,0,0" VerticalAlignment="Top" Width="21" Background="#FFFFA31A" Foreground="White" Click="Button_Click"/>
+        <Button x:Name="DestinationPath" Content="..." HorizontalAlignment="Left" Margin="605,275,0,0" VerticalAlignment="Top"  Width="21" Background="#FFFFA31A" Foreground="White" Click="DestinationPath_Click"/>
         <Label Content="Name Of" HorizontalAlignment="Left" Margin="31,72,0,0" VerticalAlignment="Top" Height="48" Width="72" Foreground="White" Background="#FFFFA31A"/>
         <Label Content="Source" HorizontalAlignment="Left" Margin="31,160,0,0" VerticalAlignment="Top" Height="48" Width="72" Foreground="White" Background="#FFFFA31A"/>
         <Label Content="Destination" HorizontalAlignment="Left" Margin="31,247,0,0" VerticalAlignment="Top" Height="48" Width="72" Foreground="White" Background="#FFFFA31A"/>
+        <Image HorizontalAlignment="Left" Height="66" Margin="636,54,0,0" VerticalAlignment="Top" Width="162" Source="/easysaveph.png"/>
     </Grid>
 </Window>

@@ -21,5 +21,55 @@ namespace AppGraphique
         {
             InitializeComponent();
         }
+
+       
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Create OpenFileDialog
+            Ookii.Dialogs.Wpf.VistaFolderBrowserDialog openDlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
+
+            // Launch OpenFileDialog by calling ShowDialog method
+            Nullable<bool> result = openDlg.ShowDialog();
+            // Get the selected file name and display in a TextBox.
+            // Load content of file in a TextBlock
+            if (result == true)
+            {
+                TextboxSourceFR.Text = openDlg.SelectedPath;
+                // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
+            }
+            else
+            {
+                MessageBox.Show("Le répertoire de destination précisé est vide");
+            }
+
+        }
+
+        private void DestinationPath_Click(object sender, RoutedEventArgs e)
+        {
+            // Create OpenFileDialog
+            Ookii.Dialogs.Wpf.VistaFolderBrowserDialog openDlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
+
+            // Launch OpenFileDialog by calling ShowDialog method
+            Nullable<bool> result = openDlg.ShowDialog();
+            // Get the selected file name and display in a TextBox.
+            // Load content of file in a TextBlock
+            if (result == true)
+            {
+                TextboxDestinationFR.Text = openDlg.SelectedPath;
+                // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
+            }
+            else
+            {
+
+                MessageBox.Show("Le répertoire source précisé est vide");
+            }
+
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
