@@ -18,3 +18,7 @@ C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\obj\Debug\netcoreap
 C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.dll
 C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.pdb
 C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.genruntimeconfig.cache
+C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Eng Window.g.cs
+C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Fr Window.g.cs
+C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Eng Window.baml
+C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Fr Window.baml
