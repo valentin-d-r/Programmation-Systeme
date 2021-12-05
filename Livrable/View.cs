@@ -52,6 +52,7 @@ namespace Livrable
             getName();
             getSource();
             getDest();
+            controller.updateSaveInfo();
         }
 
         public void getName()

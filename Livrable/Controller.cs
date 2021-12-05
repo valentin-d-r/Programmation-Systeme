@@ -26,12 +26,23 @@ namespace Livrable
             viewLogState.setController(this);
 
             view.saveInfo();
+        }
+        public void updateSaveInfo()
+        {
+            model.Name = view.Name;
+            model.Source = view.Source;
+            model.Dest = view.Dest;
 
-            public void updateSaveInfo()
-            {
+            viewLogState.Name = model.Name;
+            viewLogState.Source = model.Source;
+            viewLogState.Dest = model.Dest;
 
-                view.saveInfo();
-            }
+            model.createSave();
+
+            viewLogState.Timestamp = model.Timestamp;
+            viewLogState.State = model.State;
+
+            view.saveInfo();
         }
     }
 }
