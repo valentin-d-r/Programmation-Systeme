@@ -15,7 +15,6 @@ namespace Livrable
             public double tailledest;
             public double taillesource;
             public CalculLenght calculTaille = new CalculLenght();
-            public CalculTime calculTemps;
             public double temps;
             List<JSONStates> listJSON2 = new List<JSONStates>();
 
@@ -27,8 +26,6 @@ namespace Livrable
                 this.dest = save.dest;
                 this.taillesource = save.tailleFichiers;
                 this.tailledest = calculTaille.calculateFolderSize(dest);
-                calculTemps = new CalculTime(this.save);
-                this.temps = calculTemps.temps;
 
          
             }
