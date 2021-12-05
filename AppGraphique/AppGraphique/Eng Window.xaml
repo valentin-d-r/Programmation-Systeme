@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppGraphique"
         mc:Ignorable="d"
-        Title="Window2" Height="450" Width="800">
+        Title="Window2" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Margin="0,-51,0,0" RenderTransformOrigin="0.504,0.526" Background="Black">
         <Button Content="Launch" HorizontalAlignment="Left" Margin="625,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FFFFA31A" Foreground="White"/>
         <TextBox HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFFA31A" Foreground="White"/>
@@ -19,5 +19,6 @@
         <Label Content="Source" HorizontalAlignment="Left" Margin="31,160,0,0" VerticalAlignment="Top" Height="48" Width="72" Foreground="White" Background="#FFFFA31A"/>
         <Label Content="Destination" HorizontalAlignment="Left" Margin="31,247,0,0" VerticalAlignment="Top" Height="48" Width="72" Foreground="White" Background="#FFFFA31A"/>
         <Image HorizontalAlignment="Left" Height="66" Margin="636,54,0,0" VerticalAlignment="Top" Width="162" Source="/easysaveph.png"/>
+        <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="625,406,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="38" Width="134" Foreground="White" Background="#FFFFA31A"/>
     </Grid>
 </Window>

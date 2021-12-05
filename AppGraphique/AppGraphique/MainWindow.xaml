@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppGraphique"
         mc:Ignorable="d"
-        Title="MainWindow" Height="381" Width="800">
-    <Grid Background="Black">
+        Title="MainWindow" Height="381" Width="800" ResizeMode="NoResize">
+        
+    <Grid Background="#FF191717">
         <Button Content="Français" HorizontalAlignment="Left" Margin="158,194,0,0" VerticalAlignment="Top" Height="67" Width="147" Background="#FFFFA31A" Click="Button_Click_3"/>
         <Button Content="English" HorizontalAlignment="Left" Margin="508,194,0,0" VerticalAlignment="Top" Height="67" Width="147" Background="#FFFFA31A" Click="Button_Click_4"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="-2,0,0,0" VerticalAlignment="Top" Width="239" Source="/easysaveph.png" RenderTransformOrigin="0.622,0.51"/>
+        <Image HorizontalAlignment="Left" Height="72" Margin="-2,0,0,0" VerticalAlignment="Top" Width="172" Source="/easysaveph.png" RenderTransformOrigin="0.622,0.51"/>
 
     </Grid>
 </Window>

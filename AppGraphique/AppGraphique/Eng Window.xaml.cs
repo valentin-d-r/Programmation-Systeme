@@ -64,5 +64,12 @@ namespace AppGraphique
             }
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow Menu = new MainWindow();
+            Menu.Show();
+            this.Close();
+        }
     }
 }
