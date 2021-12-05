@@ -78,5 +78,13 @@ namespace AppGraphique
             Menu.Show();
             this.Close();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.Multiselect = true;
+            dialog.InitialDirectory = TextboxSourceFR.Text;
+            if (TextboxSourceFR.Text != "") { dialog.ShowDialog(); } else { MessageBox.Show("veuillez entrer un chemin valide"); }
+        }
     }
 }
