@@ -64,8 +64,8 @@ namespace AppGraphique
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            Window2 Français = new Window2();
-            Français.Show();
+            Window2 Anglais = new Window2();
+            Anglais.Show();
             this.Close();
         }
     }

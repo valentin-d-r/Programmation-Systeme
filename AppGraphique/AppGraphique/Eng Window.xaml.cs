@@ -38,7 +38,7 @@ namespace AppGraphique
             }
             else
             {
-                MessageBox.Show("Le répertoire de destination précisé est vide");
+                MessageBox.Show("You didn't choose a directory !!!");
             }
 
         }
@@ -60,7 +60,7 @@ namespace AppGraphique
             else
             {
 
-                MessageBox.Show("Le répertoire source précisé est vide");
+                MessageBox.Show("You didn't choose a directory !!!");
             }
 
         }

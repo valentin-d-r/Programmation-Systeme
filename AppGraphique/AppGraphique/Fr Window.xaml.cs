@@ -40,7 +40,7 @@ namespace AppGraphique
             }
             else
             {
-                MessageBox.Show("Le répertoire de destination précisé est vide");
+                MessageBox.Show("Vous n'avez pas choisi de répertoire !!!");
             }
 
         }
@@ -62,7 +62,7 @@ namespace AppGraphique
             else
             {
 
-                MessageBox.Show("Le répertoire source précisé est vide");
+                MessageBox.Show("Vous n'avez pas choisi de répertoire !!!");
             }
 
         }
@@ -85,6 +85,11 @@ namespace AppGraphique
             dialog.Multiselect = true;
             dialog.InitialDirectory = TextboxSourceFR.Text;
             if (TextboxSourceFR.Text != "") { dialog.ShowDialog(); } else { MessageBox.Show("veuillez entrer un chemin valide"); }
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
