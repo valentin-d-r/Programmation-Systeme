@@ -37,7 +37,7 @@ namespace Livrable
             viewLogState.Source = model.Source;
             viewLogState.Dest = model.Dest;
 
-            model.createSave();
+            model.createSave(true);
 
             viewLogState.Timestamp = model.Timestamp;
             viewLogState.State = model.State;

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NVt1JHp5YEOygGDybMEbKIAoE4U8nOga66Q2xqJsH/C3Zxft+eIgOW16a9Bi/i/x5+UJ5xC+iOrAHOoHM35Npg==",
+  "dgSpecHash": "4raxspmrFRHCs7f6vZaDuBA4+JYaYgjn5Iq9gL9ox+qJPGhmralR1g/08ieZhwcs/p+Zg0W2ufCUoHJxCTBqBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\Livrable\\Livrable.csproj",
+  "projectFilePath": "/Users/aymerick/Desktop/Reste/Programmation-Systeme/Livrable/Livrable.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\33624\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "/Users/aymerick/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

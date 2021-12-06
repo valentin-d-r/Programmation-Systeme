@@ -22,6 +22,7 @@ namespace Livrable
         private DateTime timestamp;
         private string fileTransferTime;
         private string state;
+        private bool Copy=true;
         List<JsonTry> listJSON = new List<JsonTry>();
         List<JSONStates> listJSON2 = new List<JSONStates>();
 
@@ -75,35 +76,44 @@ namespace Livrable
         }
 
 
-        public void createSave()
+        public bool createSave(bool copySubDirs)
         {
             State = "ACTIF";
-            try
+            DirectoryInfo dir = new DirectoryInfo(Source);
+            DirectoryInfo dest = new DirectoryInfo(Dest);            DirectoryInfo[] dirs = dir.GetDirectories();
+            Directory.CreateDirectory(Dest);
+            FileInfo[] files = dir.GetFiles();
+            foreach (FileInfo file in files)
             {
-                string path = Dest + @"\" + Name + ".";
-                DateTime start = DateTime.Now;
+                Console.WriteLine(file.Extension); 
+                if (file.Extension == ".exe" ) // MERCI MAC QUI POUR .APP = .PLIST ????  AU FINAL CA FONCTIONNE PTDR
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine("Présence d'un logiciel ! Sauvegarde INTERDITE");
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Copy = false;
+                    Directory.Delete(Dest, true);
+                    return Copy;
+                }
+                string tempPath = Path.Combine(Dest, file.Name);
+                file.CopyTo(tempPath, false);
 
-                Timestamp = start;
 
-                File.Copy(Source, path, true);
-                DateTime stop = DateTime.Now;
-
-                FileTransferTime = (stop - start).ToString();
-
-                FileInfo file = new FileInfo(Source);
-                Size = file.Length;
-
-                Console.WriteLine("Success");
             }
-            catch (IOException iox)
+            // If copying subdirectories, copy them and their contents to new location.
+            if (copySubDirs)
             {
-                Console.WriteLine(iox.Message);
+                foreach (DirectoryInfo subdir in dirs)
+                {
+                    string tempPath = Path.Combine(Dest, subdir.Name);
+                    createSave(copySubDirs);
+                }
             }
-
             createLog();
             createLogState();
             State = "NON ACTIF";
             createLogState();
+            return Copy;
         }
 
         public void createLog()

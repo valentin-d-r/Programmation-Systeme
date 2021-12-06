@@ -71,24 +71,14 @@ namespace Livrable
 
         public void getSource()
         {
-            bool isSourceValid = false;
-            while (isSourceValid != true)
-            {
                 Console.WriteLine("Veuillez le chemin source");
                 Source = Console.ReadLine();
-                isSourceValid = checkFilePath(Source);
-            }
         }
 
         public void getDest()
         {
-            bool isDestValid = false;
-            while (isDestValid != true)
-            {
                 Console.WriteLine("Veuillez le chemin de destination");
                 Dest = Console.ReadLine();
-                isDestValid = checkDestPath(Dest);
-            }
         }
 
         public bool checkFilePath(string filePath)
