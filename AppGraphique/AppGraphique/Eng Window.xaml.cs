@@ -21,7 +21,9 @@ namespace AppGraphique
         {
             InitializeComponent();
         }
-
+        string Dest;
+        string Source;
+        string Name;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Create OpenFileDialog
@@ -34,6 +36,8 @@ namespace AppGraphique
             if (result == true)
             {
                 TextboxSourceEng.Text = openDlg.SelectedPath;
+                Source = openDlg.SelectedPath;
+
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
@@ -50,11 +54,13 @@ namespace AppGraphique
 
             // Launch OpenFileDialog by calling ShowDialog method
             Nullable<bool> result = openDlg.ShowDialog();
+            
             // Get the selected file name and display in a TextBox.
             // Load content of file in a TextBlock
             if (result == true)
             {
                 TextboxDestinationEng.Text = openDlg.SelectedPath;
+                Dest = openDlg.SelectedPath;
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
@@ -78,6 +84,25 @@ namespace AppGraphique
             dialog.Multiselect = true;
             dialog.InitialDirectory = TextboxSourceEng.Text;
             if (TextboxSourceEng.Text != "") { dialog.ShowDialog(); } else { MessageBox.Show("veuillez entrer un chemin valide"); }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            WriteLogsStates log2 = new WriteLogsStates(Source, Dest, Name); //
+            WriteLog log = new WriteLog(Source, Dest, Name); //We write in the logs
+            log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
+            log2.write();
+        }
+
+        private void TextboxSourceEng_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Name  = tbSelectSomeText.Text;
+
         }
     }
 }

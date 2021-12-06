@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Margin="0,-51,0,0" RenderTransformOrigin="0.504,0.526" Background="#FF262626">
-        <Button Content="Lancer" HorizontalAlignment="Left" Margin="625,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold"/>
-        <TextBox x:Name="TextBoxSaveName" HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Lancer" HorizontalAlignment="Left" Margin="625,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" Click="Button_Click_3"/>
+        <TextBox x:Name="tbSelectSomeTextFR" HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" TextChanged="TextBox_TextChanged"/>
         <TextBox x:Name="TextboxSourceFR" HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16"/>
         <TextBox x:Name="TextboxDestinationFR" HorizontalAlignment="Left" Margin="230,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48"  Background="#FFFF4C47" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold"/>
         <RadioButton Content="Cryptage" HorizontalAlignment="Left" Margin="31,371,0,0" VerticalAlignment="Top" Foreground="White" Checked="RadioButton_Checked"/>

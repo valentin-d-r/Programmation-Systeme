@@ -22,7 +22,9 @@ namespace AppGraphique
             InitializeComponent();
         }
 
-       
+        string Dest;
+        string Source;
+        string Name;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -36,6 +38,7 @@ namespace AppGraphique
             if (result == true)
             {
                 TextboxSourceFR.Text = openDlg.SelectedPath;
+                Source = openDlg.SelectedPath;
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
@@ -57,6 +60,7 @@ namespace AppGraphique
             if (result == true)
             {
                 TextboxDestinationFR.Text = openDlg.SelectedPath;
+                Dest = openDlg.SelectedPath;
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
@@ -85,11 +89,28 @@ namespace AppGraphique
             dialog.Multiselect = true;
             dialog.InitialDirectory = TextboxSourceFR.Text;
             if (TextboxSourceFR.Text != "") { dialog.ShowDialog(); } else { MessageBox.Show("veuillez entrer un chemin valide"); }
+
+            /*DialogResult dr = this.Dialog.ShowDialog();
+
+            foreach (String file in dialog.FileNames)
+            {
+                Prosoft dr = new Prosoft();
+                dr.Cryptage(dialog.FileNames);
+
+            }*/
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            Name = tbSelectSomeTextFR.Text;
+        }
 
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            WriteLogsStates log2 = new WriteLogsStates(Source, Dest, Name);
+            WriteLog log = new WriteLog(Source, Dest, Name); //We write in the logs
+            log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
+            log2.write();
         }
     }
 }

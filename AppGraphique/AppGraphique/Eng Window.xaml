@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Window2" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Margin="0,-51,0,0" RenderTransformOrigin="0.504,0.526" Background="#FF262626">
-        <Button Content="Launch" HorizontalAlignment="Left" Margin="625,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold"/>
-        <TextBox x:Name="TextboxSourceEng" HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="LaunchBouton" Content="Launch" HorizontalAlignment="Left" Margin="625,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16" Click="Button_Click_3"/>
+        <TextBox x:Name="tbSelectSomeText" HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="TextboxSourceEng" HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16" TextChanged="TextboxSourceEng_TextChanged"/>
         <TextBox x:Name="TextboxDestinationEng" HorizontalAlignment="Left" Margin="230,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16"/>
         <RadioButton Content="Encryption" HorizontalAlignment="Left" Margin="31,374,0,0" VerticalAlignment="Top" Foreground="White"/>
         <RadioButton Content="Decoding" HorizontalAlignment="Left" Margin="230,371,0,0" VerticalAlignment="Top" Background="White" OpacityMask="#FFA06F33" Foreground="White"/>
