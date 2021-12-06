@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows;
+
 namespace AppGraphique
 {
     public class Prosoft
@@ -11,17 +13,12 @@ namespace AppGraphique
         {
             get { return "Draugar".ToCharArray(); }
         }
-        public int Cryptage(string[] args)
+        public void Cryptage(string FileSource, string FileDestination) 
         {
-            for (int i = 1; i < 100; i++)
-            {
-                source = args[i];
-                byte[] filesource = File.ReadAllBytes(source);
-                File.WriteAllBytes(dest, xor(filesource));
-            }
-            
 
-            return 0;
+            byte[] filesource = File.ReadAllBytes(FileSource);
+
+            File.WriteAllBytes(FileDestination, xor(filesource));
 
         }
         static private byte[] xor(byte[] source)

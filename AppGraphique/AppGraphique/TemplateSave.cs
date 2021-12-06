@@ -34,7 +34,7 @@ namespace AppGraphique
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo file in files)
             {
-                if (file.Extension == ".plist") // MERCI MAC QUI POUR .APP = .PLIST ???? 
+                if (file.Extension == ".exe") // MERCI MAC QUI POUR .APP = .PLIST ???? 
                 {
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine("Présence d'un logiciel ! Sauvegarde INTERDITE");

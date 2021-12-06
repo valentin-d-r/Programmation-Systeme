@@ -83,23 +83,6 @@ namespace AppGraphique
             this.Close();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
-            dialog.Multiselect = true;
-            dialog.InitialDirectory = TextboxSourceFR.Text;
-            if (TextboxSourceFR.Text != "") { dialog.ShowDialog(); } else { MessageBox.Show("veuillez entrer un chemin valide"); }
-
-            /*DialogResult dr = this.Dialog.ShowDialog();
-
-            foreach (String file in dialog.FileNames)
-            {
-                Prosoft dr = new Prosoft();
-                dr.Cryptage(dialog.FileNames);
-
-            }*/
-        }
-
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             Name = tbSelectSomeTextFR.Text;
@@ -111,6 +94,21 @@ namespace AppGraphique
             WriteLog log = new WriteLog(Source, Dest, Name); //We write in the logs
             log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
             log2.write();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.Multiselect = true;
+            dialog.InitialDirectory = TextboxSourceFR.Text;
+            if (TextboxSourceFR.Text != "") { dialog.ShowDialog(); } else { MessageBox.Show("veuillez entrer un chemin valide"); }
+
+            foreach (var file in dialog.FileNames)
+            {
+                var fileToCrypt = file.Replace(TextboxSourceFR.Text, TextboxDestinationFR.Text);
+                Prosoft dr = new Prosoft();
+                dr.Cryptage(file, fileToCrypt);
+            }
         }
     }
 }

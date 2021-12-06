@@ -78,13 +78,6 @@ namespace AppGraphique
             this.Close();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
-            dialog.Multiselect = true;
-            dialog.InitialDirectory = TextboxSourceEng.Text;
-            if (TextboxSourceEng.Text != "") { dialog.ShowDialog(); } else { MessageBox.Show("veuillez entrer un chemin valide"); }
-        }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
@@ -103,6 +96,21 @@ namespace AppGraphique
         {
             Name  = tbSelectSomeText.Text;
 
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.Multiselect = true;
+            dialog.InitialDirectory = TextboxSourceEng.Text;
+            if (TextboxSourceEng.Text != "") { dialog.ShowDialog(); } else { MessageBox.Show("veuillez entrer un chemin valide"); }
+
+            foreach (var file in dialog.FileNames)
+            {
+                var fileToCrypt = file.Replace(TextboxSourceEng.Text, TextboxDestinationEng.Text);
+                Prosoft dr = new Prosoft();
+                dr.Cryptage(file, fileToCrypt);
+            }
         }
     }
 }
