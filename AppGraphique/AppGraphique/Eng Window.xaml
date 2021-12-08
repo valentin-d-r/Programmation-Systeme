@@ -7,17 +7,17 @@
         mc:Ignorable="d"
         Title="Window2" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Margin="0,-51,0,0" RenderTransformOrigin="0.504,0.526" Background="#FF262626">
-        <Button x:Name="LaunchBouton" Content="Save" HorizontalAlignment="Left" Margin="385,389,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16" Click="Button_Click_3"/>
-        <TextBox x:Name="tbSelectSomeText" HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" TextChanged="TextBox_TextChanged"/>
-        <TextBox x:Name="TextboxSourceEng" HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16" TextChanged="TextboxSourceEng_TextChanged"/>
-        <TextBox x:Name="TextboxDestinationEng" HorizontalAlignment="Left" Margin="230,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FFFF4C47" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16"/>
-        <Button x:Name="Source3points" Content="..." HorizontalAlignment="Left" Margin="605,183,0,0" VerticalAlignment="Top" Width="21" Background="#FFFF474C" Foreground="#FFCEDBFE" Click="Button_Click" FontSize="16" FontWeight="Bold"/>
-        <Button x:Name="DestinationPath" Content="..." HorizontalAlignment="Left" Margin="605,270,0,0" VerticalAlignment="Top"  Width="21" Background="#FFFF4C47" Foreground="#FFCEDBFE" Click="DestinationPath_Click" FontWeight="Bold" FontSize="16"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="31,72,0,0" VerticalAlignment="Top" Height="48" Width="97" Foreground="#FFCEDBFE" Background="#FFFF4C47" FontWeight="Bold" FontSize="16"/>
-        <Label Content="Source" HorizontalAlignment="Left" Margin="31,160,0,0" VerticalAlignment="Top" Height="48" Width="97" Foreground="#FFCEDBFE" Background="#FFFF4C47" FontWeight="Bold" FontSize="16"/>
-        <Label Content="Destination" HorizontalAlignment="Left" Margin="31,247,0,0" VerticalAlignment="Top" Height="48" Width="97" Foreground="#FFCEDBFE" Background="#FFFF4C47" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="LaunchBouton" Content="Save" HorizontalAlignment="Left" Margin="405,357,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FF262626" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16" Click="Button_Click_3" BorderBrush="#FF262626"/>
+        <TextBox x:Name="tbSelectSomeText" HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FF505050" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="TextboxSourceEng" HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FF505047" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16" TextChanged="TextboxSourceEng_TextChanged"/>
+        <TextBox x:Name="TextboxDestinationEng" HorizontalAlignment="Left" Margin="230,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FF505050" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="Source3points" Content="..." HorizontalAlignment="Left" Margin="605,183,0,0" VerticalAlignment="Top" Width="21" Background="White" Foreground="Black" Click="Button_Click" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="DestinationPath" Content="..." HorizontalAlignment="Left" Margin="605,270,0,0" VerticalAlignment="Top"  Width="21" Background="White" Foreground="Black" Click="DestinationPath_Click" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="70,72,0,0" VerticalAlignment="Top" Height="48" Width="97" Foreground="#FFCEDBFE" Background="#FF262626" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Source" HorizontalAlignment="Left" Margin="70,160,0,0" VerticalAlignment="Top" Height="48" Width="97" Foreground="#FFCEDBFE" Background="#FF262626" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Destination" HorizontalAlignment="Left" Margin="70,247,0,0" VerticalAlignment="Top" Height="48" Width="97" Foreground="#FFCEDBFE" Background="#FF262626" FontWeight="Bold" FontSize="16"/>
         <Image HorizontalAlignment="Left" Height="89" Margin="695,59,0,0" VerticalAlignment="Top" Width="104" Source="/Image1.png"/>
-        <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="609,392,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="45" Width="134" Foreground="#FFCEDBFE" Background="#FFFF4C47" FontWeight="Bold" FontSize="16"/>
-        <Button Content="Encryption" HorizontalAlignment="Left" Margin="165,389,0,0" VerticalAlignment="Top" Height="48" Width="134" Click="Button_Click_4" Background="#FFFF4C47" FontWeight="Bold" FontSize="16" Foreground="#FFCEDBFE"/>
+        <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="609,360,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="45" Width="134" Foreground="#FFCEDBFE" Background="#FF262626" FontWeight="Bold" FontSize="16" BorderBrush="#FF262626"/>
+        <Button Content="Encryption" HorizontalAlignment="Left" Margin="201,357,0,0" VerticalAlignment="Top" Height="48" Width="134" Click="Button_Click_4" Background="#FF262626" FontWeight="Bold" FontSize="16" Foreground="#FFCEDBFE" BorderBrush="#FF262626"/>
     </Grid>
 </Window>
