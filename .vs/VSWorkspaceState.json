@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Livrable"
+    "\\Livrable",
+    "\\View",
+    "\\ViewModel"
   ],
-  "SelectedNode": "\\Crypt XOR",
+  "SelectedNode": "\\View\\Class1.cs",
   "PreviewInSolutionExplorer": false
 }
