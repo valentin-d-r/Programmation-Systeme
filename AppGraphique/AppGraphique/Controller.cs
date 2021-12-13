@@ -38,6 +38,7 @@ namespace AppGraphique
 
             model.createSave(logModel, logStateModel);
 
+            logModel.Name = model.Name;
             logModel.Source = model.Source;
             logModel.Dest = model.Dest;
             logModel.FileTransferTime = model.FileTransferTime;

@@ -195,4 +195,47 @@ namespace AppGraphique
         }
         #endregion
     }
+
+    public class CalculLenght
+    {
+        public int numberfichier;
+
+        public float calculateFolderSize(string folder)
+        {
+            float size = 0.0f;
+            try
+            {
+                //Checks if the path is valid or not
+                if (!Directory.Exists(folder))
+                    return size;
+                else
+                {
+                    try
+                    {
+                        foreach (string file in Directory.GetFiles(folder))
+                        {
+                            if (File.Exists(file))
+                            {
+                                numberfichier++;
+                                FileInfo finfo = new FileInfo(file);
+                                size += finfo.Length;
+                            }
+                        }
+
+                        foreach (string dir in Directory.GetDirectories(folder))
+                            size += calculateFolderSize(dir);
+                    }
+                    catch (NotSupportedException e)
+                    {
+                        Console.WriteLine("Unable to calculate folder size: {0}", e.Message);
+                    }
+                }
+            }
+            catch (UnauthorizedAccessException e)
+            {
+                Console.WriteLine("Unable to calculate folder size: {0}", e.Message);
+            }
+            return size;
+        }
+    }
 }
