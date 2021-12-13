@@ -102,7 +102,7 @@ namespace AppGraphique {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AppGraphique;component/fr%20window.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AppGraphique_rdypciwu_wpftmp;component/fr%20window.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Fr Window.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
