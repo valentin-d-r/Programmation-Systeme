@@ -25,3 +25,30 @@ C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\obj\Debug\netcoreap
 C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\Ookii.Dialogs.Wpf.dll
 C:\Users\Draugar\Desktop\C# Liv 02\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.csproj.CopyComplete
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\AppGraphique.exe
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\AppGraphique.deps.json
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\AppGraphique.runtimeconfig.json
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\AppGraphique.runtimeconfig.dev.json
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\AppGraphique.dll
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\AppGraphique.pdb
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\Ookii.Dialogs.Wpf.dll
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.csproj.AssemblyReference.cache
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Eng Window.g.cs
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Fr Window.g.cs
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique_MarkupCompile.cache
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique_MarkupCompile.lref
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Eng Window.baml
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Fr Window.baml
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.g.resources
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.AssemblyInfoInputs.cache
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.AssemblyInfo.cs
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.csproj.CoreCompileInputs.cache
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.csproj.CopyComplete
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.dll
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.pdb
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.genruntimeconfig.cache
