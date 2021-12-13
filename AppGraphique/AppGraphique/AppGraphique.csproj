@@ -7,9 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="easySave.png" />
-    <None Remove="easysaveph-removebg-preview.png" />
-    <None Remove="easysaveph.png" />
     <None Remove="Image1.png" />
   </ItemGroup>
 
@@ -19,9 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="easySave.png" />
-    <Resource Include="easysaveph-removebg-preview.png" />
-    <Resource Include="easysaveph.png" />
     <Resource Include="Image1.png" />
   </ItemGroup>
 

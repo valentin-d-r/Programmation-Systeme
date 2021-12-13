@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Margin="0,-51,0,0" RenderTransformOrigin="0.504,0.526" Background="#FF262626">
-        <Button Content="Sauvegarder" HorizontalAlignment="Left" Margin="405,399,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FF262626" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" Click="Button_Click_3" BorderBrush="#FF262626"/>
+        <Button Content="Cryptage" HorizontalAlignment="Left" Margin="230,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Click="Button_Click_4" Background="#FF262626" FontWeight="Bold" FontSize="16" Foreground="#FFCEDBFE" BorderBrush="#FF262626" Visibility="Hidden"/>
+        <Button Content="Sauvegarder" HorizontalAlignment="Left" Margin="415,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FF262626" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" Click="Button_Click_3" BorderBrush="#FF262626"/>
         <TextBox x:Name="tbSelectSomeTextFR" HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FF515050" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" TextChanged="TextBox_TextChanged" BorderBrush="#FF262626"/>
         <TextBox x:Name="TextboxSourceFR" HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FF505050" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16"/>
         <TextBox x:Name="TextboxDestinationFR" HorizontalAlignment="Left" Margin="230,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48"  Background="#FF50504E" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold"/>
@@ -17,7 +18,7 @@
         <Label Content="Source" HorizontalAlignment="Left" Margin="82,160,0,0" VerticalAlignment="Top" Height="48" Width="103" Foreground="#FFCEDBFE" Background="#FF262626" FontWeight="Bold" FontSize="16"/>
         <Label Content="Destination" HorizontalAlignment="Left" Margin="82,247,0,0" VerticalAlignment="Top" Height="48" Width="103" Foreground="#FFCEDBFE" Background="#FF262623" FontSize="16" FontWeight="Bold"/>
         <Image HorizontalAlignment="Left" Height="99" Margin="701,50,0,0" VerticalAlignment="Top" Width="99" Source="/Image1.png"/>
-        <Button Content="Revenir au menu" HorizontalAlignment="Left" Margin="625,399,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="45" Width="134" Foreground="#FFCEDBFE" Background="#FF262626" FontSize="16" FontWeight="Bold" BorderBrush="#FF262626"/>
-        <Button Content="Cryptage" HorizontalAlignment="Left" Margin="186,399,0,0" VerticalAlignment="Top" Height="48" Width="134" Click="Button_Click_4" Background="#FF262626" FontWeight="Bold" FontSize="16" Foreground="#FFCEDBFE" BorderBrush="#FF262626"/>
+        <Button Content="Revenir au menu" HorizontalAlignment="Left" Margin="616,340,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="44" Width="134" Foreground="#FFCEDBFE" Background="#FF262626" FontSize="16" FontWeight="Bold" BorderBrush="#FF262626"/>
+        <Button x:Name="ChangeExtensions" Content="Paramètre" HorizontalAlignment="Left" Margin="683,410,0,0" VerticalAlignment="Top" Click="Button_Click_2" Height="37" Width="97" FontSize="16" BorderBrush="#FF262629" Foreground="#FFCEDBFE" Background="#FF262626"/>
     </Grid>
 </Window>

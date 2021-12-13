@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,7 +24,7 @@ namespace AppGraphique
         }
         string Dest;
         string Source;
-        string Name;
+        new string Name;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Create OpenFileDialog
@@ -81,10 +82,13 @@ namespace AppGraphique
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            WriteLogsStates log2 = new WriteLogsStates(Source, Dest, Name); //
-            WriteLog log = new WriteLog(Source, Dest, Name); //We write in the logs
-            log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
-            log2.write();
+            if (tbSelectSomeText.Text != "" && TextboxSourceEng.Text != "" && TextboxDestinationEng.Text != "")
+            {
+                WriteLogsStates log2 = new WriteLogsStates(Source, Dest, Name);
+                WriteLog log = new WriteLog(Source, Dest, Name); //We write in the logs
+                log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
+                log2.write();
+            }
         }
 
         private void TextboxSourceEng_TextChanged(object sender, TextChangedEventArgs e)
@@ -100,6 +104,7 @@ namespace AppGraphique
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
+            /*
             Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
             dialog.Multiselect = true;
             dialog.InitialDirectory = TextboxSourceEng.Text;
@@ -107,10 +112,16 @@ namespace AppGraphique
 
             foreach (var file in dialog.FileNames)
             {
-                var fileToCrypt = file.Replace(TextboxSourceEng.Text, TextboxDestinationEng.Text);
+                /*var fileToCrypt = file.Replace(TextboxSourceEng.Text, TextboxDestinationEng.Text);
                 Prosoft dr = new Prosoft();
                 dr.Cryptage(file, fileToCrypt);
             }
+        */
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Process.Start("notepad.exe", @"..\..\..\extensions.json");
         }
     }
 }
