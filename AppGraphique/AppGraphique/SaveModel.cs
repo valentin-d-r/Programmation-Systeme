@@ -11,8 +11,6 @@ using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using AppGraphique.Model;
-using System.Windows;
-using System.Diagnostics;
 
 namespace AppGraphique
 {
@@ -26,6 +24,8 @@ namespace AppGraphique
         private string fileTransferTime;
         private string state;
         private bool Copy = true;
+        /*List<JsonTry> listJSON = new List<JsonTry>();
+        List<JSONStates> listJSON2 = new List<JSONStates>();*/
 
         #region GETER AND SETER
         public string Name
@@ -74,6 +74,7 @@ namespace AppGraphique
             Timestamp = default;
             FileTransferTime = default;
             State = "ACTIF";
+
         }
 
 
@@ -103,7 +104,7 @@ namespace AppGraphique
 
             }
             // If copying subdirectories, copy them and their contents to new location.
-            if (copySubDirs)
+            /*if (copySubDirs)
             {
                 foreach (DirectoryInfo subdir in dirs)
                 {
@@ -111,8 +112,89 @@ namespace AppGraphique
                     createSave(copySubDirs);
                 }
             }
+            return Copy;*/
+        }
 
-            /*return Copy;*/
-        }       
+        
+        
+    }
+    public class JsonTry
+    {
+        private DateTime date;
+        private string name;
+        private string source;
+        private string dest;
+        private double size;
+        private string fileTransferTime;
+
+        #region GETER AND SETER
+        public DateTime Date
+        {
+            get { return date; }
+            set { date = value; }
+        }
+        public string Name
+        {
+            get { return name; }
+            set { Name = value; }
+        }
+        public string Source
+        {
+            get { return source; }
+            set { source = value; }
+        }
+        public string Dest
+        {
+            get { return dest; }
+            set { dest = value; }
+        }
+        public double Size
+        {
+            get { return size; }
+            set { size = value; }
+        }
+        public string FileTransferTime
+        {
+            get { return fileTransferTime; }
+            set { fileTransferTime = value; }
+        }
+        #endregion
+    }
+
+    public class JSONStates
+    {
+        private DateTime date;
+        private string name;
+        private string source;
+        private string dest;
+        private string state;
+
+        #region GETER AND SETER
+        public DateTime Date
+        {
+            get { return date; }
+            set { date = value; }
+        }
+        public string Name
+        {
+            get { return name; }
+            set { Name = value; }
+        }
+        public string Source
+        {
+            get { return source; }
+            set { source = value; }
+        }
+        public string Dest
+        {
+            get { return dest; }
+            set { dest = value; }
+        }
+        public string State
+        {
+            get { return state; }
+            set { state = value; }
+        }
+        #endregion
     }
 }

@@ -42,6 +42,11 @@ namespace AppGraphique.Model
             get { return timestamp; }
             set { timestamp = value; }
         }
+        public string State
+        {
+            get { return dest; }
+            set { dest = value; }
+        }
         #endregion
 
         public void createLogState(LogState logState)

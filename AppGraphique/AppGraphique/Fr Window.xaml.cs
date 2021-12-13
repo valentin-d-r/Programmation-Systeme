@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AppGraphique.Model;
 
 namespace AppGraphique
 {
@@ -90,8 +91,8 @@ namespace AppGraphique
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            WriteLogsStates log2 = new WriteLogsStates(Source, Dest, Name);
-            WriteLog log = new WriteLog(Source, Dest, Name); //We write in the logs
+            LogState log2 = new LogState(Source, Dest, Name);
+            Log log = new Log(Source, Dest, Name); //We write in the logs
             log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
             log2.write();
         }
