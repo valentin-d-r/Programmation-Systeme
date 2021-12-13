@@ -33,6 +33,7 @@ namespace AppGraphique
         Controller Controller;
         private Controller controller;
 
+        #region GETER AND SETER
         public string Name
         {
             get { return name; }
@@ -48,6 +49,7 @@ namespace AppGraphique
             get { return dest; }
             set { dest = value; }
         }
+        #endregion
 
         public Window1()
         {

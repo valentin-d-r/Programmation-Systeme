@@ -17,13 +17,35 @@ namespace AppGraphique
     /// </summary>
     public partial class Window2 : Window
     {
+        private string name;
+        private string source;
+        private string dest;
+        Controller Controller;
+        private Controller controller;
+
+        #region GETER AND SETER
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        public string Source
+        {
+            get { return source; }
+            set { source = value; }
+        }
+        public string Dest
+        {
+            get { return dest; }
+            set { dest = value; }
+        }
+        #endregion
         public Window2()
         {
+            this.Controller = controller;
             InitializeComponent();
         }
-        string Dest;
-        string Source;
-        string Name;
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Create OpenFileDialog
@@ -81,10 +103,10 @@ namespace AppGraphique
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            WriteLogsStates log2 = new WriteLogsStates(Source, Dest, Name); //
-            WriteLog log = new WriteLog(Source, Dest, Name); //We write in the logs
-            log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
-            log2.write();
+            Name = tbSelectSomeText.Text;
+            Source = TextboxSourceEng.Text;
+            Dest = TextboxDestinationEng.Text;
+            Controller.updateSaveInfo(Name, Source, Dest);
         }
 
         private void TextboxSourceEng_TextChanged(object sender, TextChangedEventArgs e)
@@ -98,7 +120,7 @@ namespace AppGraphique
 
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        /*private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
             dialog.Multiselect = true;
@@ -111,6 +133,6 @@ namespace AppGraphique
                 Prosoft dr = new Prosoft();
                 dr.Cryptage(file, fileToCrypt);
             }
-        }
+        }*/
     }
 }
