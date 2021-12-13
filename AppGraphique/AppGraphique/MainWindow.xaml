@@ -15,6 +15,8 @@
         <Button Content="Français" HorizontalAlignment="Left" Margin="158,194,0,0" VerticalAlignment="Top" Height="67" Width="147" Background="#FF262626" Click="Button_Click_3" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" BorderBrush="#FF262626"/>
         <Button Content="English" HorizontalAlignment="Left" Margin="76,194,0,0" VerticalAlignment="Top" Height="67" Width="147" Background="#FF262626" Click="Button_Click_4" Grid.Column="1" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" BorderBrush="#FF262626"/>
         <Image HorizontalAlignment="Left" Height="114" Margin="258,0,0,0" VerticalAlignment="Top" Width="110" Source="/Image1.png" RenderTransformOrigin="0.622,0.51" Grid.Column="1"/>
+        <Image HorizontalAlignment="Left" Height="29" Margin="196,213,0,0" VerticalAlignment="Top" Width="53" Source="/ENG Flag.png" Grid.Column="1"/>
+        <Image HorizontalAlignment="Left" Height="29" Margin="284,213,0,0" VerticalAlignment="Top" Width="46" Source="/FR Flag.png"/>
 
     </Grid>
 </Window>
