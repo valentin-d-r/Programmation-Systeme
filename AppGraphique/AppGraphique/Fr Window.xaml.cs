@@ -8,7 +8,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Resources;
+using System.Threading;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Globalization;
+using Microsoft.Win32;
 using AppGraphique.Model;
 
 namespace AppGraphique
@@ -18,14 +27,33 @@ namespace AppGraphique
     /// </summary>
     public partial class Window1 : Window
     {
-        public Window1()
+        private string name;
+        private string source;
+        private string dest;
+        Controller Controller;
+        private Controller controller;
+
+        public string Name
         {
-            InitializeComponent();
+            get { return name; }
+            set { name = value; }
+        }
+        public string Source
+        {
+            get { return source; }
+            set { source = value; }
+        }
+        public string Dest
+        {
+            get { return dest; }
+            set { dest = value; }
         }
 
-        string Dest;
-        string Source;
-        string Name;
+        public Window1()
+        {
+            this.Controller = controller;
+            InitializeComponent();
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -91,25 +119,10 @@ namespace AppGraphique
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            LogState log2 = new LogState(Source, Dest, Name);
-            Log log = new Log(Source, Dest, Name); //We write in the logs
-            log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
-            log2.write();
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
-            dialog.Multiselect = true;
-            dialog.InitialDirectory = TextboxSourceFR.Text;
-            if (TextboxSourceFR.Text != "") { dialog.ShowDialog(); } else { MessageBox.Show("veuillez entrer un chemin valide"); }
-
-            foreach (var file in dialog.FileNames)
-            {
-                var fileToCrypt = file.Replace(TextboxSourceFR.Text, TextboxDestinationFR.Text);
-                Prosoft dr = new Prosoft();
-                dr.Cryptage(file, fileToCrypt);
-            }
+            Name = tbSelectSomeTextFR.Text;
+            Source = TextboxSourceFR.Text;
+            Dest = TextboxDestinationFR.Text;
+            Controller.updateSaveInfo(Name, Source, Dest);
         }
     }
 }

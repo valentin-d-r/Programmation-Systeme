@@ -19,7 +19,7 @@ namespace AppGraphique
         private string name;
         private string source;
         private string dest;
-        private double size;
+        private long size;
         private DateTime timestamp;
         private string fileTransferTime;
         private string state;
@@ -43,7 +43,7 @@ namespace AppGraphique
             get { return dest; }
             set { dest = value; }
         }
-        public double Size
+        public long Size
         {
             get { return size; }
             set { size = value; }
@@ -80,9 +80,11 @@ namespace AppGraphique
 
         public void createSave(Log logModel, LogState logStateModel)
         {
+
             State = "ACTIF";
             DirectoryInfo dir = new DirectoryInfo(Source);
-            DirectoryInfo dest = new DirectoryInfo(Dest); DirectoryInfo[] dirs = dir.GetDirectories();
+            DirectoryInfo dest = new DirectoryInfo(Dest); 
+            DirectoryInfo[] dirs = dir.GetDirectories();
             Directory.CreateDirectory(Dest);
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo file in files)
@@ -104,15 +106,11 @@ namespace AppGraphique
 
             }
             // If copying subdirectories, copy them and their contents to new location.
-            /*if (copySubDirs)
-            {
                 foreach (DirectoryInfo subdir in dirs)
                 {
                     string tempPath = Path.Combine(Dest, subdir.Name);
-                    createSave(copySubDirs);
+                    createSave(logModel, logStateModel);
                 }
-            }
-            return Copy;*/
         }
 
         
