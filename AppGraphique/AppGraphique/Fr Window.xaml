@@ -22,5 +22,6 @@
         <Button x:Name="ChangeExtensions" Content="Extensions" HorizontalAlignment="Left" Margin="683,410,0,0" VerticalAlignment="Top" Click="Button_Click_2" Height="37" Width="97" FontSize="16" BorderBrush="#FF262629" Foreground="#FFCEDBFE" Background="#FF262626"/>
         <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="0" Margin="34,393,0,0" VerticalAlignment="Top" Width="138"/>
         <Button Content="Prioritaire" HorizontalAlignment="Left" Margin="570,415,0,0" VerticalAlignment="Top" Click="Button_Click_5" Background="#FF262626" BorderBrush="#FF262626" Foreground="#FFCEDBFE" Height="27" Width="78" FontSize="16" FontWeight="Normal"/>
+        <Button x:Name="ButtonAdd" Content="Add" HorizontalAlignment="Left" Margin="315,401,0,0" VerticalAlignment="Top" Height="48" Width="68" Click="ButtonAdd_Click"/>
     </Grid>
 </Window>

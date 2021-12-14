@@ -4,17 +4,30 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\
+=======
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\
+>>>>>>> ChangeProjectForm
 AppGraphique
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+<<<<<<< HEAD
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\App.xaml
 4899988643
 
 201889434766
 201-1259751537
 Eng Window.xaml;Fr Window.xaml;MainWindow.xaml;Popup.xaml;
+=======
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\App.xaml
+3-1468570240
 
-False
+122125669228
+201794813664
+Eng Window.xaml;Fr Window.xaml;MainWindow.xaml;
+>>>>>>> ChangeProjectForm
+
+True
 

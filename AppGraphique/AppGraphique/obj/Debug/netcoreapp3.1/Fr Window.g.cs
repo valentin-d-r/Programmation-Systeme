@@ -83,6 +83,14 @@ namespace AppGraphique {
         #line hidden
         
         
+        #line 21 "..\..\..\Fr Window.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button ButtonAdd;
+        
+        #line default
+        #line hidden
+        
+        
         #line 22 "..\..\..\Fr Window.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button ChangeExtensions;
@@ -185,9 +193,13 @@ namespace AppGraphique {
             #line default
             #line hidden
             return;
+            case 8:
+            this.ButtonAdd = ((System.Windows.Controls.Button)(target));
             case 9:
             this.ChangeExtensions = ((System.Windows.Controls.Button)(target));
             
+            #line 21 "..\..\..\Fr Window.xaml"
+            this.ButtonAdd.Click += new System.Windows.RoutedEventHandler(this.ButtonAdd_Click);
             #line 22 "..\..\..\Fr Window.xaml"
             this.ChangeExtensions.Click += new System.Windows.RoutedEventHandler(this.Button_Click_2);
             

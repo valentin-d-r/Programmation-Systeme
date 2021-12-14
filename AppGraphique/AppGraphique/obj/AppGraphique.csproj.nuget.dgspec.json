@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj": {}
   },
   "projects": {
@@ -12,12 +13,25 @@
         "projectPath": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
         "packagesPath": "C:\\Users\\Draugar\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\obj\\",
+=======
+    "C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
+        "projectName": "AppGraphique",
+        "projectPath": "C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
+        "packagesPath": "C:\\Users\\33624\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\obj\\",
+>>>>>>> ChangeProjectForm
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Draugar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\33624\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

@@ -9,7 +9,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Resources;
+using System.Threading;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Globalization;
+using Microsoft.Win32;
+using AppGraphique.Model;
 
 namespace AppGraphique
 {
@@ -18,14 +28,34 @@ namespace AppGraphique
     /// </summary>
     public partial class Window1 : Window
     {
-        public Window1()
+        public List<SaveModel> saveList = new List<SaveModel>();
+        public List<Thread> threadList = new List<Thread>();
+
+        #region GETER AND SETER
+        /*public string Name
         {
+            get { return name; }
+            set { name = value; }
+        }
+        public string Source
+        {
+            get { return source; }
+            set { source = value; }
+        }
+        public string Dest
+        {
+            get { return dest; }
+            set { dest = value; }
+        }*/
+
+        public Controller Controller { get; set; }
+        #endregion
+
+        public Window1(Controller controller)
+        {
+            this.Controller = controller;
             InitializeComponent();
         }
-
-        string Dest;
-        string Source;
-        string Name;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -39,7 +69,7 @@ namespace AppGraphique
             if (result == true)
             {
                 TextboxSourceFR.Text = openDlg.SelectedPath;
-                Source = openDlg.SelectedPath;
+
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
@@ -61,7 +91,6 @@ namespace AppGraphique
             if (result == true)
             {
                 TextboxDestinationFR.Text = openDlg.SelectedPath;
-                Dest = openDlg.SelectedPath;
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
@@ -95,33 +124,42 @@ namespace AppGraphique
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            if (tbSelectSomeTextFR.Text != "" && TextboxSourceFR.Text != "" && TextboxDestinationFR.Text != "")
+            Process[] process = Process.GetProcessesByName("Calculator");
+            if (process.Length > 1)
             {
-                WriteLogsStates log2 = new WriteLogsStates(Source, Dest, Name);
-                WriteLog log = new WriteLog(Source, Dest, Name); //We write in the logs
-                log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
-                log2.write();
+                MessageBox.Show("Deja en route");
+                Environment.Exit(0);
             }
-            PopupFR Français = new PopupFR();
-            Français.Show();
+            else
+            {
+                //Controller.updateSaveInfo(Name, Source, Dest);
+
+                for (int i = 0; i < saveList.Count; i++)
+                {
+
+                    SaveModel save = saveList[i];
+
+                    Thread thread = new Thread(() => Controller.updateSaveInfo(save.getName(), save.getSource(), save.getDest()));
+                    threadList.Add(thread);
+                }
+
+
+                for (int j = 0; j < threadList.Count; j++)
+                {
+                    threadList[j].Start();
+                }
+            } 
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            /*
-            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
-            dialog.Multiselect = true;
-            dialog.InitialDirectory = TextboxSourceFR.Text;
-            if (TextboxSourceFR.Text != "") { dialog.ShowDialog(); } else { MessageBox.Show("veuillez entrer un chemin valide"); }
-
-            foreach (var file in dialog.FileNames)
-            {
-                var fileToCrypt = file.Replace(TextboxSourceFR.Text, TextboxDestinationFR.Text);
-                var p = new Process();
-                p.StartInfo.FileName = @"..\..\..\CryptoSoft\CryptoSoft.exe";
-                p.StartInfo.Arguments = $"{file} {fileToCrypt}";
-                p.Start();
-            */
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        { 
+            SaveModel save = new SaveModel();
+            save.setName(tbSelectSomeTextFR.Text);
+            save.setSource(TextboxSourceFR.Text);
+            save.setDest(TextboxDestinationFR.Text);
+            saveList.Add(save);
+            TextboxSourceFR.Text = "";
+            TextboxDestinationFR.Text = "";
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

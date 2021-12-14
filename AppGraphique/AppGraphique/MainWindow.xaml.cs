@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace AppGraphique
 {
@@ -20,10 +21,23 @@ namespace AppGraphique
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public Controller Controller { get; set; }
+
+        public MainWindow() 
         {
+            //Mono instance
+            Process[] process = Process.GetProcessesByName("AppGraphique");
+            if(process.Length != 1)
+            {
+                MessageBox.Show("Deja en route");
+                Environment.Exit(0);
+            }
+
+            Controller controller = new Controller();
+            this.Controller = controller;
             InitializeComponent();
-        }
+        
+       }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -57,7 +71,7 @@ namespace AppGraphique
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            Window1 Français = new Window1();
+            Window1 Français = new Window1(Controller);
             Français.Show();
             this.Close();
         }
@@ -70,3 +84,4 @@ namespace AppGraphique
         }
     }
 }
+
