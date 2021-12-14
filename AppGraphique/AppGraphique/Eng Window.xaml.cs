@@ -89,6 +89,8 @@ namespace AppGraphique
                 log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
                 log2.write();
             }
+            PopupFR Français = new PopupFR();
+            Français.Show();
         }
 
         private void TextboxSourceEng_TextChanged(object sender, TextChangedEventArgs e)
