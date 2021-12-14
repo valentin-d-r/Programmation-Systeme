@@ -1,18 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "l7JBhbIVKYUs75UwLZjgDZApDHmY93wFDIkN4qt7Nkz6PCqDttekymI3uEUrC00OS7xjy6JKHPnpVgIcvsmr7w==",
+  "dgSpecHash": "D0alffzQNfxy7G6BVrC80tkGmCJHp3i4/Y8d881T2sUnceFe4Q6o4cdP9WiBDtglupc8lCb5AleuBHkQA/Mu6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
+  "projectFilePath": "C:\\Users\\Aymerick\\Desktop\\ProgSys\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\33624\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\33624\\.nuget\\packages\\ookii.dialogs.wpf\\5.0.0\\ookii.dialogs.wpf.5.0.0.nupkg.sha512"
+    "C:\\Users\\Aymerick\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Aymerick\\.nuget\\packages\\ookii.dialogs.wpf\\5.0.0\\ookii.dialogs.wpf.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

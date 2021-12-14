@@ -124,8 +124,8 @@ namespace AppGraphique
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            Process[] process = Process.GetProcessesByName("Calculator");
-            if (process.Length > 1)
+            Process[] process = Process.GetProcessesByName("notepad");
+            if (process.Length > 0)
             {
                 MessageBox.Show("Veuillez arreter le processus en cours");
                 Environment.Exit(0);
@@ -139,7 +139,7 @@ namespace AppGraphique
 
                     SaveModel save = saveList[i];
 
-                    Thread thread = new Thread(() => Controller.updateSaveInfo(save.getName(), save.getSource(), save.getDest()));
+                    Thread thread = new Thread(() => Controller.updateSaveInfo(save));
                     threadList.Add(thread);
                 }
 
@@ -154,6 +154,8 @@ namespace AppGraphique
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         { 
             SaveModel save = new SaveModel();
+            String[] listExt = TextboxExt.Text.Split(";");
+            save.set_ext(listExt);
             save.setName(tbSelectSomeTextFR.Text);
             save.setSource(TextboxSourceFR.Text);
             save.setDest(TextboxDestinationFR.Text);
@@ -171,6 +173,5 @@ namespace AppGraphique
         {
             Process.Start("notepad.exe", @"..\..\..\Priorite.json");
         }
-        
     }
 }
