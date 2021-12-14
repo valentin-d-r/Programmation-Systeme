@@ -161,6 +161,7 @@ namespace AppGraphique
             get { return date; }
             set { date = value; }
         }
+
         public string Name
         {
             get { return name; }

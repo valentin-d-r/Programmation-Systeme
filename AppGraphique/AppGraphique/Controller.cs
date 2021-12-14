@@ -28,6 +28,7 @@ namespace AppGraphique
             model = new SaveModel();
             logModel = new Log();
             logStateModel = new LogState();
+            JsonTry cc = new JsonTry();
         }
 
         public void updateSaveInfo(string Name, string Source, string Dest)

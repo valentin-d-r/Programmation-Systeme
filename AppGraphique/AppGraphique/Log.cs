@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
 using System.Linq;
 using System.Resources;
 using System.Reflection;
@@ -59,10 +59,14 @@ namespace AppGraphique.Model
         {
 
             List<JsonTry> listJSON = new List<JsonTry>();
-            string json = JsonConvert.SerializeObject(log);
-
+           // string json = JsonConvert.SerializeObject(log);
             Directory.CreateDirectory(@"C:\Backup\Logs");
-            File.AppendAllText(@"\Backup\Logs\Logs.json", json);
+
+
+
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string jsonString = System.Text.Json.JsonSerializer.Serialize(log, options);
+            File.AppendAllText(@"\Backup\Logs\Logs.json", jsonString);
 
 
             /*if (!File.Exists(fileName))
