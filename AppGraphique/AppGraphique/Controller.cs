@@ -30,13 +30,13 @@ namespace AppGraphique
             logStateModel = new LogState();
         }
 
-        public void updateSaveInfo(string Name, string Source, string Dest)
+        public void updateSaveInfo(SaveModel save)
         {
-            model.Name = Name;
-            model.Source = Source;
-            model.Dest = Dest;
+            model.Name = save.Name;
+            model.Source = save.Source;
+            model.Dest = save.Dest;
 
-            model.createSave(logModel, logStateModel);
+            model.createSave(save);
 
             logModel.Name = model.Name;
             logModel.Source = model.Source;

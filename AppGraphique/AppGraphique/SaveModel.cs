@@ -11,7 +11,9 @@ using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using AppGraphique.Model;
-
+using System.Text;
+using System.IO;
+using System.Diagnostics;
 namespace AppGraphique
 {
     public class SaveModel
@@ -24,6 +26,9 @@ namespace AppGraphique
         private string fileTransferTime;
         private string state;
         private bool Copy = true;
+        public string[] ext;
+        public static States etat_file;
+        public static int nbfile;
         /*List<JsonTry> listJSON = new List<JsonTry>();
         List<JSONStates> listJSON2 = new List<JSONStates>();*/
         public string getSource()
@@ -56,6 +61,14 @@ namespace AppGraphique
             this.Name = name2;
 
 
+        }
+        public string[] get_ext()
+        {
+            return this.ext;
+        }
+        public void set_ext(string[] ext)
+        {
+            this.ext = ext;
         }
         #region GETER AND SETER
         public string Name
@@ -106,46 +119,113 @@ namespace AppGraphique
             State = "ACTIF";
 
         }
-
-
-        public void createSave(Log logModel, LogState logStateModel)
+        public enum States //enum the differents states of the backup 
         {
-
-            State = "ACTIF";
-            DirectoryInfo dir = new DirectoryInfo(Source);
-            DirectoryInfo dest = new DirectoryInfo(Dest); 
-            DirectoryInfo[] dirs = dir.GetDirectories();
-            Directory.CreateDirectory(Dest);
-            FileInfo[] files = dir.GetFiles();
-            foreach (FileInfo file in files)
-            {
-                Console.WriteLine(file.Extension);
-                if (file.Extension == ".exe") // MERCI MAC QUI POUR .APP = .PLIST ????  AU FINAL CA FONCTIONNE PTDR
-                {
-                    Console.ForegroundColor = ConsoleColor.DarkYellow;
-                    Console.WriteLine("Présence d'un logiciel ! Sauvegarde INTERDITE");
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Copy = false;
-                    Directory.Delete(Dest, true);
-
-                    /*return Copy;*/
-                }
-                string tempPath = Path.Combine(Dest, file.Name);
-                file.CopyTo(tempPath, false);
-
-
-            }
-            // If copying subdirectories, copy them and their contents to new location.
-                foreach (DirectoryInfo subdir in dirs)
-                {
-                    string tempPath = Path.Combine(Dest, subdir.Name);
-                    createSave(logModel, logStateModel);
-                }
+            END,
+            INPROGRESS,
+            NONACTIVE,
         }
 
-        
-        
+
+        public void createSave(SaveModel save)
+        {
+
+            string dest = save.getDest();
+            string[] ext = save.get_ext();
+            string source = save.getSource();
+            Stopwatch sw = Stopwatch.StartNew();
+            etat_file = States.INPROGRESS;
+
+            DirectoryInfo disource = new DirectoryInfo(source);
+            long taille = calculateFolderSize(disource);
+
+
+            foreach (var directory in Directory.GetDirectories(source))
+            {
+                string dirName = Path.GetFileName(directory);
+                if (!Directory.Exists(Path.Combine(dest, dirName)))
+                {
+                    Directory.CreateDirectory(Path.Combine(dest, dirName));
+                    Console.Write(Path.Combine(dest, dirName));
+                }
+                source = directory;
+                dest = Path.Combine(dest, dirName);
+                createSave(save);
+            }
+
+            nbfile = 0;
+
+            List<string> listFilePrio = new List<string>();
+            List<string> listFileNoPrio = new List<string>();
+
+            foreach (var file in Directory.GetFiles(source))
+            {
+                foreach (string extention in ext)
+                {
+                    if (Path.GetExtension(file).Equals(extention, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        listFilePrio.Add(file);
+                    }
+                    else
+                    {
+                        listFileNoPrio.Add(file);
+                    }
+                }
+            }
+            FileInfo[] files = disource.GetFiles();
+            var json = File.ReadAllText(@"..\..\..\Extensions.json");
+            var List = JsonConvert.DeserializeObject<List<Extension>>(json) ?? new List<Extension>();
+
+            string[] extensions = new string[] { List[0].extensionsAccepted };
+            extensions = extensions[0].Split(',', ' ');
+            foreach (FileInfo file in files)
+            {
+                if (extensions.Contains(file.Extension))
+                {
+                    var fileToCrypt = file.FullName.Replace(source, dest);
+                    var p = new Process();
+                    p.StartInfo.FileName = @"..\..\..\CryptoSoft\CryptoSoft.exe";
+                    p.StartInfo.Arguments = $"{file} {fileToCrypt}";
+                    p.Start();
+                }
+            }
+            foreach (var fileprio in listFilePrio)
+            {
+
+                File.Copy(fileprio, Path.Combine(dest, Path.GetFileName(fileprio)));
+                nbfile++;
+            }
+
+            foreach (var filenoprio in listFileNoPrio)
+            {
+                File.Copy(filenoprio, Path.Combine(dest, Path.GetFileName(filenoprio)));
+                nbfile++;
+            }
+
+            etat_file = States.END;
+
+            sw.Stop();
+            double time_exec = sw.Elapsed.TotalMilliseconds;
+        }
+        public long calculateFolderSize(DirectoryInfo d)
+        {
+            long Size = 0;
+            // Ajoute taille des fichiers
+            FileInfo[] fis = d.GetFiles();
+            foreach (FileInfo fi in fis)
+            {
+                Size += fi.Length;
+            }
+            // Ajoute taille des sous répertoires
+            DirectoryInfo[] dis = d.GetDirectories();
+            foreach (DirectoryInfo di in dis)
+            {
+                Size += calculateFolderSize(di);
+            }
+            return (Size);
+        }
     }
+
     public class JsonTry
     {
         private DateTime date;
@@ -225,48 +305,5 @@ namespace AppGraphique
             set { state = value; }
         }
         #endregion
-    }
-
-    public class CalculLenght
-    {
-        public int numberfichier;
-
-        public float calculateFolderSize(string folder)
-        {
-            float size = 0.0f;
-            try
-            {
-                //Checks if the path is valid or not
-                if (!Directory.Exists(folder))
-                    return size;
-                else
-                {
-                    try
-                    {
-                        foreach (string file in Directory.GetFiles(folder))
-                        {
-                            if (File.Exists(file))
-                            {
-                                numberfichier++;
-                                FileInfo finfo = new FileInfo(file);
-                                size += finfo.Length;
-                            }
-                        }
-
-                        foreach (string dir in Directory.GetDirectories(folder))
-                            size += calculateFolderSize(dir);
-                    }
-                    catch (NotSupportedException e)
-                    {
-                        Console.WriteLine("Unable to calculate folder size: {0}", e.Message);
-                    }
-                }
-            }
-            catch (UnauthorizedAccessException e)
-            {
-                Console.WriteLine("Unable to calculate folder size: {0}", e.Message);
-            }
-            return size;
-        }
     }
 }

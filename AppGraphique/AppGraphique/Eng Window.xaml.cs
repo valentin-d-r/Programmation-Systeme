@@ -119,23 +119,23 @@ namespace AppGraphique
             {
                 //Controller.updateSaveInfo(Name, Source, Dest);
 
-                /*for (int i = 0; i < saveList.Count; i++)
+                for (int i = 0; i < saveList.Count; i++)
                 {
 
                     SaveModel save = saveList[i];
 
-                    Thread thread = new Thread(() => Controller.updateSaveInfo(save.getName(), save.getSource(), save.getDest()));
-                    threadList.Add(thread);
+                    //Thread thread = new Thread(() => Controller.updateSaveInfo(save.getName(), save.getSource(), save.getDest()));
+                    //threadList.Add(thread);
                 }
 
 
                 for (int j = 0; j < threadList.Count; j++)
                 {
                     threadList[j].Start();
-                }*/
+                }
             }
 
-            /*Name = tbSelectSomeText.Text;
+           /* Name = tbSelectSomeText.Text;
             Source = TextboxSourceEng.Text;
             Dest = TextboxDestinationEng.Text;
             Controller.updateSaveInfo(Name, Source, Dest);*/
@@ -160,6 +160,8 @@ namespace AppGraphique
         {
             Process.Start("notepad.exe", @"..\..\..\Priorite.json");
         }
+
+
 
         /*private void Button_Click_4(object sender, RoutedEventArgs e)
         {

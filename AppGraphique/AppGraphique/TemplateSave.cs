@@ -53,16 +53,6 @@ namespace AppGraphique
             extensions = extensions[0].Split(',', ' ');
             foreach (FileInfo file in files)
             {
-                /*
-                if (file.Extension == ".exe") // MERCI MAC QUI POUR .APP = .PLIST ???? 
-                {
-                    Console.ForegroundColor = ConsoleColor.DarkYellow;
-                    Console.WriteLine("Présence d'un logiciel ! Sauvegarde INTERDITE");
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Copy = false;
-                    Directory.Delete(destDirName, true);
-                    return Copy;
-                }*/
                 if (extensions.Contains(file.Extension))
                 {
                     var fileToCrypt = file.FullName.Replace(sourceDirName, destDirName);

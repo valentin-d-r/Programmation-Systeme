@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Margin="0,-51,0,0" RenderTransformOrigin="0.504,0.526" Background="#FF262626">
-        <Button Content="Cryptage" HorizontalAlignment="Left" Margin="230,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Click="Button_Click_4" Background="#FF262626" FontWeight="Bold" FontSize="16" Foreground="#FFCEDBFE" BorderBrush="#FF262626" Visibility="Hidden"/>
         <Button Content="Sauvegarder" HorizontalAlignment="Left" Margin="415,338,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FF262626" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" Click="Button_Click_3" BorderBrush="#FF262626"/>
         <TextBox x:Name="tbSelectSomeTextFR" HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FF515050" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" TextChanged="TextBox_TextChanged" BorderBrush="#FF262626"/>
         <TextBox x:Name="TextboxSourceFR" HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FF505050" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16"/>
@@ -23,5 +22,6 @@
         <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="0" Margin="34,393,0,0" VerticalAlignment="Top" Width="138"/>
         <Button Content="Prioritaire" HorizontalAlignment="Left" Margin="570,415,0,0" VerticalAlignment="Top" Click="Button_Click_5" Background="#FF262626" BorderBrush="#FF262626" Foreground="#FFCEDBFE" Height="27" Width="78" FontSize="16" FontWeight="Normal"/>
         <Button x:Name="ButtonAdd" Content="Add" HorizontalAlignment="Left" Margin="315,401,0,0" VerticalAlignment="Top" Height="48" Width="68" Click="ButtonAdd_Click"/>
+        <TextBox x:Name="TextboxExt" HorizontalAlignment="Left" Margin="216,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="378" Height="25" TextChanged="TextBox_TextChanged" FontSize="20" RenderTransformOrigin="0.496,1.468"/>
     </Grid>
 </Window>
