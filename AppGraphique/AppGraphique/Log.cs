@@ -13,7 +13,7 @@ using System.Text.Json.Serialization;
 
 namespace AppGraphique.Model
 {
-    class Log
+    public class Log
     {
         string name;
         string source;

@@ -27,14 +27,11 @@ namespace AppGraphique
     /// </summary>
     public partial class Window1 : Window
     {
-        private string name;
-        private string source;
-        private string dest;
-        Controller Controller;
-        private Controller controller;
+        public List<SaveModel> saveList = new List<SaveModel>();
+        public List<Thread> threadList = new List<Thread>();
 
         #region GETER AND SETER
-        public string Name
+        /*public string Name
         {
             get { return name; }
             set { name = value; }
@@ -48,10 +45,12 @@ namespace AppGraphique
         {
             get { return dest; }
             set { dest = value; }
-        }
+        }*/
+
+        public Controller Controller { get; set; }
         #endregion
 
-        public Window1()
+        public Window1(Controller controller)
         {
             this.Controller = controller;
             InitializeComponent();
@@ -69,7 +68,7 @@ namespace AppGraphique
             if (result == true)
             {
                 TextboxSourceFR.Text = openDlg.SelectedPath;
-                Source = openDlg.SelectedPath;
+
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
@@ -91,7 +90,6 @@ namespace AppGraphique
             if (result == true)
             {
                 TextboxDestinationFR.Text = openDlg.SelectedPath;
-                Dest = openDlg.SelectedPath;
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
@@ -121,10 +119,42 @@ namespace AppGraphique
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            Name = tbSelectSomeTextFR.Text;
-            Source = TextboxSourceFR.Text;
-            Dest = TextboxDestinationFR.Text;
-            Controller.updateSaveInfo(Name, Source, Dest);
+            Process[] process = Process.GetProcessesByName("Calculator");
+            if (process.Length > 1)
+            {
+                MessageBox.Show("Deja en route");
+                Environment.Exit(0);
+            }
+            else
+            {
+                //Controller.updateSaveInfo(Name, Source, Dest);
+
+                for (int i = 0; i < saveList.Count; i++)
+                {
+
+                    SaveModel save = saveList[i];
+
+                    Thread thread = new Thread(() => Controller.updateSaveInfo(save.getName(), save.getSource(), save.getDest()));
+                    threadList.Add(thread);
+                }
+
+
+                for (int j = 0; j < threadList.Count; j++)
+                {
+                    threadList[j].Start();
+                }
+            } 
+        }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        { 
+            SaveModel save = new SaveModel();
+            save.setName(tbSelectSomeTextFR.Text);
+            save.setSource(TextboxSourceFR.Text);
+            save.setDest(TextboxDestinationFR.Text);
+            saveList.Add(save);
+            TextboxSourceFR.Text = "";
+            TextboxDestinationFR.Text = "";
         }
     }
 }

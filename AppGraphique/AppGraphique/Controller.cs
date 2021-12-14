@@ -16,7 +16,7 @@ using System.Diagnostics;
 
 namespace AppGraphique
 {
-    class Controller
+    public class Controller
     {
         private SaveModel model;
         private Log logModel;

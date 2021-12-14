@@ -18,5 +18,6 @@
         <Label Content="Destination" HorizontalAlignment="Left" Margin="82,247,0,0" VerticalAlignment="Top" Height="48" Width="103" Foreground="#FFCEDBFE" Background="#FF262623" FontSize="16" FontWeight="Bold"/>
         <Image HorizontalAlignment="Left" Height="99" Margin="701,50,0,0" VerticalAlignment="Top" Width="99" Source="/Image1.png"/>
         <Button Content="Revenir au menu" HorizontalAlignment="Left" Margin="625,399,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="45" Width="134" Foreground="#FFCEDBFE" Background="#FF262626" FontSize="16" FontWeight="Bold" BorderBrush="#FF262626"/>
+        <Button x:Name="ButtonAdd" Content="Add" HorizontalAlignment="Left" Margin="315,401,0,0" VerticalAlignment="Top" Height="48" Width="68" Click="ButtonAdd_Click"/>
     </Grid>
 </Window>

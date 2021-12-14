@@ -14,7 +14,7 @@ using AppGraphique.Model;
 
 namespace AppGraphique
 {
-    class SaveModel
+    public class SaveModel
     {
         private string name;
         private string source;
@@ -26,7 +26,37 @@ namespace AppGraphique
         private bool Copy = true;
         /*List<JsonTry> listJSON = new List<JsonTry>();
         List<JSONStates> listJSON2 = new List<JSONStates>();*/
+        public string getSource()
+        {
+           return source;
+      
+        }
+        public string getDest()
+        {
+            return dest;
 
+        }
+        public string getName()
+        {
+           return name;
+   
+        }
+        public void setSource(string source2)
+        {
+           this.source=source2;
+
+        }
+        public void setDest(string dest2)
+        {
+            this.dest = dest2;
+
+        }
+        public void setName(string name2)
+        {
+            this.Name = name2;
+
+
+        }
         #region GETER AND SETER
         public string Name
         {
