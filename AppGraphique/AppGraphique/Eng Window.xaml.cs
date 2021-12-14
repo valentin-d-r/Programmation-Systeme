@@ -125,5 +125,10 @@ namespace AppGraphique
         {
             Process.Start("notepad.exe", @"..\..\..\extensions.json");
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Process.Start("notepad.exe", @"..\..\..\Priorite.json");
+        }
     }
 }
