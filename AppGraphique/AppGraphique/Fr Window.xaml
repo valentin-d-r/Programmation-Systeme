@@ -20,5 +20,6 @@
         <Image HorizontalAlignment="Left" Height="99" Margin="701,50,0,0" VerticalAlignment="Top" Width="99" Source="/Image1.png"/>
         <Button Content="Revenir au menu" HorizontalAlignment="Left" Margin="616,340,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="44" Width="134" Foreground="#FFCEDBFE" Background="#FF262626" FontSize="16" FontWeight="Bold" BorderBrush="#FF262626"/>
         <Button x:Name="ChangeExtensions" Content="Paramètre" HorizontalAlignment="Left" Margin="683,410,0,0" VerticalAlignment="Top" Click="Button_Click_2" Height="37" Width="97" FontSize="16" BorderBrush="#FF262629" Foreground="#FFCEDBFE" Background="#FF262626"/>
+        <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="0" Margin="34,393,0,0" VerticalAlignment="Top" Width="138"/>
     </Grid>
 </Window>

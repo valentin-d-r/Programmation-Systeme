@@ -52,3 +52,5 @@ C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.dll
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.pdb
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.genruntimeconfig.cache
+C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Popup.g.cs
+C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Popup.baml

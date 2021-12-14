@@ -102,6 +102,8 @@ namespace AppGraphique
                 log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
                 log2.write();
             }
+            PopupFR Français = new PopupFR();
+            Français.Show();
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
