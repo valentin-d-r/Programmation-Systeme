@@ -91,19 +91,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
-      "projectName": "AppGraphique",
-      "projectPath": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
-      "packagesPath": "C:\\Users\\Draugar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
       "projectName": "AppGraphique",
       "projectPath": "C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
       "packagesPath": "C:\\Users\\33624\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\obj\\",
->>>>>>> ChangeProjectForm
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -166,5 +158,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Users\\33624\\Documents\\GitHub\\Programmation-Systeme\\AppGraphique\\AppGraphique\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

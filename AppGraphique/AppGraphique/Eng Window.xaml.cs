@@ -9,7 +9,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Resources;
+using System.Threading;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Globalization;
+using Microsoft.Win32;
+using AppGraphique.Model;
 
 namespace AppGraphique
 {
@@ -18,14 +28,11 @@ namespace AppGraphique
     /// </summary>
     public partial class Window2 : Window
     {
-        private string name;
-        private string source;
-        private string dest;
-        Controller Controller;
-        private Controller controller;
+        public List<SaveModel> saveList = new List<SaveModel>();
+        public List<Thread> threadList = new List<Thread>();
 
         #region GETER AND SETER
-        public string Name
+        /*public string Name
         {
             get { return name; }
             set { name = value; }
@@ -39,16 +46,14 @@ namespace AppGraphique
         {
             get { return dest; }
             set { dest = value; }
-        }
+        }*/
         #endregion
-        public Window2()
+        public Window2(Controller controller)
         {
-            this.Controller = controller;
+            /*this.Controller = controller;*/
             InitializeComponent();
         }
-        string Dest;
-        string Source;
-        new string Name;
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Create OpenFileDialog
@@ -61,7 +66,6 @@ namespace AppGraphique
             if (result == true)
             {
                 TextboxSourceEng.Text = openDlg.SelectedPath;
-                Source = openDlg.SelectedPath;
 
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
@@ -85,7 +89,6 @@ namespace AppGraphique
             if (result == true)
             {
                 TextboxDestinationEng.Text = openDlg.SelectedPath;
-                Dest = openDlg.SelectedPath;
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
@@ -106,10 +109,36 @@ namespace AppGraphique
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            Name = tbSelectSomeText.Text;
+            Process[] process = Process.GetProcessesByName("Calculator");
+            if (process.Length > 1)
+            {
+                MessageBox.Show("Veuillez arreter le processus en cours");
+                Environment.Exit(0);
+            }
+            else
+            {
+                //Controller.updateSaveInfo(Name, Source, Dest);
+
+                /*for (int i = 0; i < saveList.Count; i++)
+                {
+
+                    SaveModel save = saveList[i];
+
+                    Thread thread = new Thread(() => Controller.updateSaveInfo(save.getName(), save.getSource(), save.getDest()));
+                    threadList.Add(thread);
+                }
+
+
+                for (int j = 0; j < threadList.Count; j++)
+                {
+                    threadList[j].Start();
+                }*/
+            }
+
+            /*Name = tbSelectSomeText.Text;
             Source = TextboxSourceEng.Text;
             Dest = TextboxDestinationEng.Text;
-            Controller.updateSaveInfo(Name, Source, Dest);
+            Controller.updateSaveInfo(Name, Source, Dest);*/
         }
 
         private void TextboxSourceEng_TextChanged(object sender, TextChangedEventArgs e)
@@ -121,6 +150,15 @@ namespace AppGraphique
         {
             Name  = tbSelectSomeText.Text;
 
+        }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Process.Start("notepad.exe", @"..\..\..\extensions.json");
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Process.Start("notepad.exe", @"..\..\..\Priorite.json");
         }
 
         /*private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -138,16 +176,5 @@ namespace AppGraphique
                 dr.Cryptage(file, fileToCrypt);
             }
         */
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Process.Start("notepad.exe", @"..\..\..\extensions.json");
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-            Process.Start("notepad.exe", @"..\..\..\Priorite.json");
-        }
-    }
+    }      
 }

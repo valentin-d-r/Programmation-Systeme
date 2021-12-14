@@ -1,7 +1,3 @@
 is_global = true
 build_property.RootNamespace = AppGraphique
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\
-=======
 build_property.ProjectDir = C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\
->>>>>>> ChangeProjectForm

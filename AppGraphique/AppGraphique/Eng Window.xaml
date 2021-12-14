@@ -20,6 +20,6 @@
         <Button Content="Back to Menu" HorizontalAlignment="Left" Margin="609,328,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="45" Width="134" Foreground="#FFCEDBFE" Background="#FF262626" FontWeight="Bold" FontSize="16" BorderBrush="#FF262626"/>
         <Button Content="Encryption" HorizontalAlignment="Left" Margin="201,357,0,0" VerticalAlignment="Top" Height="48" Width="134" Click="Button_Click_4" Background="#FF262626" FontWeight="Bold" FontSize="16" Foreground="#FFCEDBFE" BorderBrush="#FF262626" Visibility="Hidden"/>
         <Button x:Name="ChangeExtensions" Content="Exetensions" HorizontalAlignment="Left" Margin="676,397,0,0" VerticalAlignment="Top" Click="Button_Click_2" Height="37" Width="97" FontSize="16" BorderBrush="#FF262629" Foreground="#FFCEDBFE" Background="#FF262626" FontWeight="Bold"/>
-        <Button Content="Priority File" HorizontalAlignment="Left" Margin="515,402,0,0" VerticalAlignment="Top" Click="Button_Click_5" Background="#FF262626" BorderBrush="#FF262626" Foreground="#FFCEDBFE" Height="27" Width="111" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="Button_Click_5" Content="Priority File" HorizontalAlignment="Left" Margin="515,402,0,0" VerticalAlignment="Top" Click="Button_Click_5" Background="#FF262626" BorderBrush="#FF262626" Foreground="#FFCEDBFE" Height="27" Width="111" FontSize="16" FontWeight="Bold"/>
     </Grid>
 </Window>

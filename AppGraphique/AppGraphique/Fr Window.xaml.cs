@@ -127,7 +127,7 @@ namespace AppGraphique
             Process[] process = Process.GetProcessesByName("Calculator");
             if (process.Length > 1)
             {
-                MessageBox.Show("Deja en route");
+                MessageBox.Show("Veuillez arreter le processus en cours");
                 Environment.Exit(0);
             }
             else

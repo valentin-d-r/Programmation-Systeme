@@ -70,7 +70,7 @@ namespace AppGraphique {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AppGraphique;component/popup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AppGraphique;V1.0.0.0;component/popup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Popup.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
