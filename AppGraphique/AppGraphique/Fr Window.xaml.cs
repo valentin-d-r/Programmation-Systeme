@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -88,16 +89,26 @@ namespace AppGraphique
             Name = tbSelectSomeTextFR.Text;
         }
 
+
+
+
+
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            WriteLogsStates log2 = new WriteLogsStates(Source, Dest, Name);
-            WriteLog log = new WriteLog(Source, Dest, Name); //We write in the logs
-            log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
-            log2.write();
+            if (tbSelectSomeTextFR.Text != "" && TextboxSourceFR.Text != "" && TextboxDestinationFR.Text != "")
+            {
+                WriteLogsStates log2 = new WriteLogsStates(Source, Dest, Name);
+                WriteLog log = new WriteLog(Source, Dest, Name); //We write in the logs
+                log.Write(); // Launch of the write function, of the WriteLog class, to write the logs
+                log2.write();
+            }
+            PopupFR Français = new PopupFR();
+            Français.Show();
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
+            /*
             Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
             dialog.Multiselect = true;
             dialog.InitialDirectory = TextboxSourceFR.Text;
@@ -106,9 +117,22 @@ namespace AppGraphique
             foreach (var file in dialog.FileNames)
             {
                 var fileToCrypt = file.Replace(TextboxSourceFR.Text, TextboxDestinationFR.Text);
-                Prosoft dr = new Prosoft();
-                dr.Cryptage(file, fileToCrypt);
-            }
+                var p = new Process();
+                p.StartInfo.FileName = @"..\..\..\CryptoSoft\CryptoSoft.exe";
+                p.StartInfo.Arguments = $"{file} {fileToCrypt}";
+                p.Start();
+            */
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Process.Start("notepad.exe", @"..\..\..\extensions.json");
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Process.Start("notepad.exe", @"..\..\..\Priorite.json");
+        }
+        
     }
 }

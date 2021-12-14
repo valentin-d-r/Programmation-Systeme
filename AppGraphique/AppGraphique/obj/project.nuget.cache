@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YmevyjjflRWyexxWqlSjyUAZZHfmr/2mfvRslzDs3QMUcxGIqIJZpE0O4gpdSrrEsz4QBBfmy+caT8HtrtvtiA==",
+  "dgSpecHash": "ILzZi1r2hd+ZZG77xqT4HKOY/C5p/NawsBqFjCqEaDnvHKcdfUK2WjTBMRU07u4RUeMhBXn+WlM6OgMWLtCrPQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Draugar\\Desktop\\C# Liv 02\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
+  "projectFilePath": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Draugar\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Draugar\\.nuget\\packages\\ookii.dialogs.wpf\\5.0.0\\ookii.dialogs.wpf.5.0.0.nupkg.sha512"

@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Windows;
+using Newtonsoft.Json;
+
 namespace AppGraphique
 {
     public class TemplateSave
@@ -34,6 +40,20 @@ namespace AppGraphique
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo file in files)
             {
+                if (file.Extension == ".exe")
+                {
+                    MessageBox.Show("Présence d'un logiciel ! Sauvegarde INTERDITE");
+                    break;
+                }
+            }
+            var json = File.ReadAllText(@"..\..\..\Extensions.json");
+            var List = JsonConvert.DeserializeObject<List<Extension>>(json) ?? new List<Extension>();
+
+            string[] extensions = new string[] { List[0].extensionsAccepted};
+            extensions = extensions[0].Split(',', ' ');
+            foreach (FileInfo file in files)
+            {
+                /*
                 if (file.Extension == ".exe") // MERCI MAC QUI POUR .APP = .PLIST ???? 
                 {
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -42,9 +62,20 @@ namespace AppGraphique
                     Copy = false;
                     Directory.Delete(destDirName, true);
                     return Copy;
+                }*/
+                if (extensions.Contains(file.Extension))
+                {
+                    var fileToCrypt = file.FullName.Replace(sourceDirName, destDirName);
+                    var p = new Process();
+                    p.StartInfo.FileName = @"..\..\..\CryptoSoft\CryptoSoft.exe";
+                    p.StartInfo.Arguments = $"{file} {fileToCrypt}";
+                    p.Start();
                 }
-                string tempPath = Path.Combine(destDirName, file.Name);
-                file.CopyTo(tempPath, false);
+                else
+                {
+                    string tempPath = Path.Combine(destDirName, file.Name);
+                    file.CopyTo(tempPath, false);
+                }
 
             }
             // If copying subdirectories, copy them and their contents to new location.

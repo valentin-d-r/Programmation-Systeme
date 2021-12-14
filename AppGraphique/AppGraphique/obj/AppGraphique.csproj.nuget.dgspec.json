@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Draugar\\Desktop\\C# Liv 02\\AppGraphique\\AppGraphique\\AppGraphique.csproj": {}
+    "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Draugar\\Desktop\\C# Liv 02\\AppGraphique\\AppGraphique\\AppGraphique.csproj": {
+    "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Draugar\\Desktop\\C# Liv 02\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
+        "projectUniqueName": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
         "projectName": "AppGraphique",
-        "projectPath": "C:\\Users\\Draugar\\Desktop\\C# Liv 02\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
+        "projectPath": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
         "packagesPath": "C:\\Users\\Draugar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Draugar\\Desktop\\C# Liv 02\\AppGraphique\\AppGraphique\\obj\\",
+        "outputPath": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
