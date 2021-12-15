@@ -27,7 +27,6 @@ namespace AppGraphique
         private string state;
         private bool Copy = true;
         public string[] ext;
-        public static States etat_file;
         double time_exec;
         public static int nbfile;
 
@@ -132,12 +131,7 @@ namespace AppGraphique
             string time2 = time.ToString();
             return time2;
         }
-        public enum States //enum the differents states of the backup 
-        {
-            END,
-            INPROGRESS,
-            NONACTIVE,
-        }
+
 
 
         public void createSave(SaveModel save)
@@ -147,7 +141,7 @@ namespace AppGraphique
             string[] ext = save.get_ext();
             string source = save.getSource();
             Stopwatch sw = Stopwatch.StartNew();
-            etat_file = States.INPROGRESS;
+            state = "EnCour";
 
             DirectoryInfo disource = new DirectoryInfo(source);
             long taille = calculateFolderSize(disource);
@@ -215,7 +209,7 @@ namespace AppGraphique
                 nbfile++;
             }
 
-            etat_file = States.END;
+ 
 
             sw.Stop();
             fileTransferTime = sw.Elapsed.TotalMilliseconds;
