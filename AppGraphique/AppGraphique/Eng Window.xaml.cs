@@ -124,8 +124,8 @@ namespace AppGraphique
 
                     SaveModel save = saveList[i];
 
-                    //Thread thread = new Thread(() => Controller.updateSaveInfo(save.getName(), save.getSource(), save.getDest()));
-                    //threadList.Add(thread);
+                    Thread thread = new Thread(() => Controller.updateSaveInfo(save));
+                    threadList.Add(thread);
                 }
 
 

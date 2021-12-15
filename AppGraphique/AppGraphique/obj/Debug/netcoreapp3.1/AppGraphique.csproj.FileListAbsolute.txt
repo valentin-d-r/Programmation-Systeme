@@ -113,3 +113,5 @@ C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphiqu
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.csproj.CoreCompileInputs.cache
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.csproj.CopyComplete
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.genruntimeconfig.cache
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Popup.g.cs
+C:\Users\33624\Documents\GitHub\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Popup.baml
