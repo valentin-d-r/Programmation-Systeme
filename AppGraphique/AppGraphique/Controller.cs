@@ -42,7 +42,7 @@ namespace AppGraphique
             logModel.Source = model.Source;
             logModel.Dest = model.Dest;
             logModel.FileTransferTime = model.FileTransferTime;
-            logModel.Timestamp = model.Timestamp;
+            logModel.Date = model.time_now();
             logModel.Size = model.Size;
             logModel.createLog(logModel);
 
@@ -50,7 +50,7 @@ namespace AppGraphique
             logStateModel.Name = model.Name;
             logStateModel.Source = model.Source;
             logStateModel.Dest = model.Dest;
-            logStateModel.Timestamp = model.Timestamp;
+            logStateModel.Date = model.time_now();
             logStateModel.State = model.State;
             logStateModel.createLogState(logStateModel);
 

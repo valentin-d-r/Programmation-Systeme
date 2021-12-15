@@ -18,7 +18,7 @@ namespace AppGraphique.Model
         string name;
         string source;
         string dest;
-        private DateTime timestamp;
+        private string date;
         private string state;
 
         #region GETER AND SETER
@@ -37,15 +37,15 @@ namespace AppGraphique.Model
             get { return dest; }
             set { dest = value; }
         }
-        public DateTime Timestamp
+        public string Date
         {
-            get { return timestamp; }
-            set { timestamp = value; }
+            get { return date; }
+            set { date = value; }
         }
         public string State
         {
-            get { return dest; }
-            set { dest = value; }
+            get { return state; }
+            set { state = value; }
         }
         #endregion
 

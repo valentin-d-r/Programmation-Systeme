@@ -23,12 +23,14 @@ namespace AppGraphique
         private string dest;
         private long size;
         private DateTime timestamp;
-        private string fileTransferTime;
+        private double fileTransferTime;
         private string state;
         private bool Copy = true;
         public string[] ext;
         public static States etat_file;
+        double time_exec;
         public static int nbfile;
+
         /*List<JsonTry> listJSON = new List<JsonTry>();
         List<JSONStates> listJSON2 = new List<JSONStates>();*/
         public string getSource()
@@ -81,6 +83,11 @@ namespace AppGraphique
             get { return source; }
             set { source = value; }
         }
+        public double Time_exec
+        {
+            get { return time_exec; }
+            set { time_exec = value; }
+        }
         public string Dest
         {
             get { return dest; }
@@ -96,7 +103,7 @@ namespace AppGraphique
             get { return timestamp; }
             set { timestamp = value; }
         }
-        public string FileTransferTime
+        public double FileTransferTime
         {
             get { return fileTransferTime; }
             set { fileTransferTime = value; }
@@ -116,8 +123,14 @@ namespace AppGraphique
             Size = 0;
             Timestamp = default;
             FileTransferTime = default;
-            State = "ACTIF";
+            State = "FINI";
 
+        }
+        public string time_now()
+        {
+            DateTime time = DateTime.Now;
+            string time2 = time.ToString();
+            return time2;
         }
         public enum States //enum the differents states of the backup 
         {
@@ -138,7 +151,7 @@ namespace AppGraphique
 
             DirectoryInfo disource = new DirectoryInfo(source);
             long taille = calculateFolderSize(disource);
-
+            size = calculateFolderSize(disource);
 
             foreach (var directory in Directory.GetDirectories(source))
             {
@@ -205,7 +218,8 @@ namespace AppGraphique
             etat_file = States.END;
 
             sw.Stop();
-            double time_exec = sw.Elapsed.TotalMilliseconds;
+            fileTransferTime = sw.Elapsed.TotalMilliseconds;
+            state = "Fini";
         }
         public long calculateFolderSize(DirectoryInfo d)
         {
@@ -272,14 +286,14 @@ namespace AppGraphique
 
     public class JSONStates
     {
-        private DateTime date;
+        private string date;
         private string name;
         private string source;
         private string dest;
         private string state;
 
         #region GETER AND SETER
-        public DateTime Date
+        public string Date
         {
             get { return date; }
             set { date = value; }

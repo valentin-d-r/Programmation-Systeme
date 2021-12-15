@@ -18,9 +18,9 @@ namespace AppGraphique.Model
         string name;
         string source;
         string dest;
-        private DateTime timestamp;
+        private string date;
         private long size;
-        private string fileTransferTime;
+        private double fileTransferTime;
 
         #region GETER AND SETER
         public string Name
@@ -38,17 +38,17 @@ namespace AppGraphique.Model
             get { return dest; }
             set { dest = value; }
         }
-        public DateTime Timestamp
+        public string Date
         {
-            get { return timestamp; }
-            set { timestamp = value; }
+            get { return date; }
+            set { date = value; }
         }
         public long Size
         {
             get { return size; }
             set { size = value; }
         }
-        public string FileTransferTime
+        public double FileTransferTime
         {
             get { return fileTransferTime; }
             set { fileTransferTime = value; }
@@ -88,5 +88,6 @@ namespace AppGraphique.Model
                 File.WriteAllText(@fileName, jsonString3);
             }*/
         }
+
     }
 }
