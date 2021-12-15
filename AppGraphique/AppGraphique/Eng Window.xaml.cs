@@ -13,7 +13,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Resources;
 using System.Threading;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -30,6 +29,7 @@ namespace AppGraphique
     {
         public List<SaveModel> saveList = new List<SaveModel>();
         public List<Thread> threadList = new List<Thread>();
+        public Controller Controller { get; set; }
 
         #region GETER AND SETER
         /*public string Name
@@ -50,7 +50,7 @@ namespace AppGraphique
         #endregion
         public Window2(Controller controller)
         {
-            /*this.Controller = controller;*/
+            this.Controller = controller;
             InitializeComponent();
         }
 
@@ -159,6 +159,19 @@ namespace AppGraphique
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             Process.Start("notepad.exe", @"..\..\..\Priorite.json");
+        }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            SaveModel save = new SaveModel();
+            String[] listExt = TextboxExtEng.Text.Split(";");
+            save.set_ext(listExt);
+            save.setName(tbSelectSomeText.Text);
+            save.setSource(TextboxSourceEng.Text);
+            save.setDest(TextboxDestinationEng.Text);
+            saveList.Add(save);
+            TextboxSourceEng.Text = "";
+            TextboxDestinationEng.Text = "";
         }
 
 
