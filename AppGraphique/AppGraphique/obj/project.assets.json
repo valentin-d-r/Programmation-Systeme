@@ -85,19 +85,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aymerick\\.nuget\\packages\\": {}
+    "C:\\Users\\Draugar\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aymerick\\Desktop\\ProgSys\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
+      "projectUniqueName": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
       "projectName": "AppGraphique",
-      "projectPath": "C:\\Users\\Aymerick\\Desktop\\ProgSys\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
-      "packagesPath": "C:\\Users\\Aymerick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aymerick\\Desktop\\ProgSys\\Programmation-Systeme\\AppGraphique\\AppGraphique\\obj\\",
+      "projectPath": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\AppGraphique.csproj",
+      "packagesPath": "C:\\Users\\Draugar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Draugar\\Desktop\\C#\\Programmation-Systeme\\AppGraphique\\AppGraphique\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Aymerick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Draugar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -150,7 +155,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
