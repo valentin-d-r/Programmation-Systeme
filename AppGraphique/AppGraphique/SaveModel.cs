@@ -19,7 +19,7 @@ namespace AppGraphique
     public class SaveModel
     {
         private string name;
-        private string source;
+        public string source;
         private string dest;
         private long size;
         private DateTime timestamp;
@@ -29,6 +29,7 @@ namespace AppGraphique
         public string[] ext;
         double time_exec;
         public static int nbfile;
+
 
         /*List<JsonTry> listJSON = new List<JsonTry>();
         List<JSONStates> listJSON2 = new List<JSONStates>();*/
@@ -60,6 +61,12 @@ namespace AppGraphique
         public void setName(string name2)
         {
             this.Name = name2;
+
+
+        }
+        public void setSize(long size2)
+        {
+            this.size = size2;
 
 
         }
@@ -112,6 +119,7 @@ namespace AppGraphique
             get { return state; }
             set { state = value; }
         }
+
         #endregion
 
         public SaveModel()
