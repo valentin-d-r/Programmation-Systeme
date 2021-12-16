@@ -19,7 +19,7 @@ namespace AppGraphique.Model
         string source;
         string dest;
         private string date;
-        private string state;
+        private string State;
 
         #region GETER AND SETER
         public string Name

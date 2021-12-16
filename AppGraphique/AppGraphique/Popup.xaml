@@ -9,8 +9,8 @@
     <Grid Background="#FF262626">
         <ProgressBar x:Name="pbstatus1" HorizontalAlignment="Center" Height="51" Margin="0,40,0,0" VerticalAlignment="Top" Width="379" ValueChanged="pbstatus1_ValueChanged"/>
         <Label Content="Progression :" HorizontalAlignment="Left" Margin="32,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.024,1.668" FontSize="18" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Foreground="White"/>
-        <Button Content="Stop" HorizontalAlignment="Left" Margin="131,150,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF262626" BorderBrush="#FF262626"/>
-        <Button Content="Pause" HorizontalAlignment="Left" Margin="78,150,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF262626" BorderBrush="#FF262626"/>
+        <Button Content="Stop" HorizontalAlignment="Left" Margin="131,150,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF262626" BorderBrush="#FF262626" Click="Button_Click_2"/>
+        <Button Content="Pause" HorizontalAlignment="Left" Margin="78,150,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF262626" BorderBrush="#FF262626" Click="Button_Click_1"/>
         <Button Content="Play" HorizontalAlignment="Left" Margin="32,150,0,0" VerticalAlignment="Top" Click="Button_Click" Foreground="White" Background="#FF262626" BorderBrush="#FF262626"/>
         <Label x:Name="lb_etat_prog_server" Content="" HorizontalAlignment="Left" Margin="338,95,0,0" VerticalAlignment="Top" Height="39" Width="72" FontSize="24" Foreground="White" Background="#FF262626" BorderBrush="#FF262626"/>
 

@@ -24,9 +24,11 @@ namespace AppGraphique
     /// </summary>
     public partial class PopupFR : Window
     {
-        public PopupFR()
+        public SaveModel backup;
+        public PopupFR(SaveModel B)
         {
             InitializeComponent();
+            backup = B;
         }
 
         void worker_DoWork(object sender, DoWorkEventArgs e)
@@ -60,12 +62,22 @@ namespace AppGraphique
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //création, initialisation et mise à jour de l'objet BackgroundWorker
+            /*//création, initialisation et mise à jour de l'objet BackgroundWorker
             BackgroundWorker worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
             worker.DoWork += worker_DoWork;
             worker.ProgressChanged += worker_ProgressChanged;
-            worker.RunWorkerAsync();
+            worker.RunWorkerAsync();*/
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

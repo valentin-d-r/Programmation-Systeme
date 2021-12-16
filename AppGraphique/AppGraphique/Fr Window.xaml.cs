@@ -136,24 +136,26 @@ namespace AppGraphique
             {
                 //Controller.updateSaveInfo(Name, Source, Dest);
 
-                for (int i = 0; i < saveList.Count; i++)
+                /*for (int i = 0; i < saveList.Count; i++)
                 {
 
                     SaveModel save = saveList[i];
 
                     Thread thread = new Thread(() => Controller.updateSaveInfo(save));
                     threadList.Add(thread);
-                }
+                }*/
 
 
-                for (int j = 0; j < threadList.Count; j++)
+                /*for (int j = 0; j < threadList.Count; j++)
                 {
 
 
                             threadList[j].Start();
-                }
+                }*/
+                Window1 Français = new Window1(saveList[0]);
+                Français.Show();
+            }
 
-            } 
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)

@@ -11,11 +11,18 @@ using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using AppGraphique.Model;
-using System.Text;
-using System.IO;
 using System.Diagnostics;
+
 namespace AppGraphique
 {
+    public enum BackupState
+    {
+        Inactif,
+        En_Cours,
+        En_Attente,
+        Finie,
+        Erreur
+    }
     public class SaveModel
     {
         private string name;
@@ -29,46 +36,54 @@ namespace AppGraphique
         public string[] ext;
         double time_exec;
         public static int nbfile;
+        public Thread Thread;
+        public EventWaitHandle mre = new AutoResetEvent(false);
+        public BackupState State;
+
+
+
+        public void Pause()
+        {
+            State = BackupState.En_Attente;
+            mre.Reset();
+        }
+        public void Stop()
+        {
+            State = BackupState.Inactif;
+            mre.Reset();
+        }
+
 
 
         /*List<JsonTry> listJSON = new List<JsonTry>();
         List<JSONStates> listJSON2 = new List<JSONStates>();*/
         public string getSource()
         {
-           return source;
-      
+           return source;      
         }
         public string getDest()
         {
             return dest;
-
         }
         public string getName()
         {
-           return name;
-   
+           return name;  
         }
         public void setSource(string source2)
         {
            this.source=source2;
-
         }
         public void setDest(string dest2)
         {
             this.dest = dest2;
-
         }
         public void setName(string name2)
         {
             this.Name = name2;
-
-
         }
         public void setSize(long size2)
         {
             this.size = size2;
-
-
         }
         public string[] get_ext()
         {
@@ -114,11 +129,7 @@ namespace AppGraphique
             get { return fileTransferTime; }
             set { fileTransferTime = value; }
         }
-        public string State
-        {
-            get { return state; }
-            set { state = value; }
-        }
+
 
         #endregion
 
@@ -127,9 +138,9 @@ namespace AppGraphique
             Name = "";
             Source = "";
             Dest = "";
-             Timestamp = default;
+            Timestamp = default;
             FileTransferTime = default;
-            State = "FINI";
+            State = BackupState.Finie;
 
         }
         public string time_now()
@@ -140,6 +151,18 @@ namespace AppGraphique
         }
 
 
+        public void play()
+        {
+            if (State == BackupState.En_Attente)
+            {
+                State = BackupState.En_Cours;
+                mre.Set();
+                return;
+            }
+            Thread = new Thread(() => createSave(this));
+            Thread.Start();
+        }
+
 
         public void createSave(SaveModel save)
         {
@@ -148,7 +171,7 @@ namespace AppGraphique
             string[] ext = save.get_ext();
             string source = save.getSource();
             Stopwatch sw = Stopwatch.StartNew();
-            state = "EnCour";
+            State = BackupState.En_Cours;
 
             DirectoryInfo disource = new DirectoryInfo(source);
             long taille = calculateFolderSize(disource);
@@ -174,6 +197,7 @@ namespace AppGraphique
 
             foreach (var file in Directory.GetFiles(source))
             {
+                Debug.WriteLine("nik khTak");
                 foreach (string extention in ext)
                 {
                     if (Path.GetExtension(file).Equals(extention, StringComparison.InvariantCultureIgnoreCase))
@@ -194,6 +218,7 @@ namespace AppGraphique
             extensions = extensions[0].Split(',', ' ');
             foreach (FileInfo file in files)
             {
+                mre.WaitOne();
                 if (extensions.Contains(file.Extension))
                 {
                     var fileToCrypt = file.FullName.Replace(source, dest);
@@ -205,13 +230,14 @@ namespace AppGraphique
             }
             foreach (var fileprio in listFilePrio)
             {
-
+                mre.WaitOne();
                 File.Copy(fileprio, Path.Combine(dest, Path.GetFileName(fileprio)));
                 nbfile++;
             }
 
             foreach (var filenoprio in listFileNoPrio)
             {
+                mre.WaitOne();
                 File.Copy(filenoprio, Path.Combine(dest, Path.GetFileName(filenoprio)));
                 nbfile++;
             }
@@ -220,7 +246,7 @@ namespace AppGraphique
 
             sw.Stop();
             fileTransferTime = sw.Elapsed.TotalMilliseconds;
-            state = "Fini";
+            State = BackupState.Finie;
         }
         public long calculateFolderSize(DirectoryInfo d)
         {
