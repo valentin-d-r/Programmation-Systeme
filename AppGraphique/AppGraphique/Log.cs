@@ -21,6 +21,7 @@ namespace AppGraphique.Model
         private string date;
         private long size;
         private double fileTransferTime;
+        private double fileTransferTimeToCrypt;
 
         #region GETER AND SETER
         public string Name
@@ -52,6 +53,11 @@ namespace AppGraphique.Model
         {
             get { return fileTransferTime; }
             set { fileTransferTime = value; }
+        }
+        public double FileTransferTimeToCrypt
+        {
+            get { return fileTransferTimeToCrypt; }
+            set { fileTransferTimeToCrypt = value; }
         }
         #endregion
 

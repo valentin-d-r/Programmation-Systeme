@@ -30,6 +30,8 @@ namespace AppGraphique
         public List<SaveModel> saveList = new List<SaveModel>();
         public List<Thread> threadList = new List<Thread>();
         public Controller Controller { get; set; }
+        int i = 0;
+        int count = 1;
 
         #region GETER AND SETER
         /*public string Name
@@ -164,16 +166,30 @@ namespace AppGraphique
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
             SaveModel save = new SaveModel();
-            String[] listExt = TextboxExtEng.Text.Split(";");
+            String[] listExt = TextboxExt.Text.Split(";");
             save.set_ext(listExt);
             save.setName(tbSelectSomeText.Text);
             save.setSource(TextboxSourceEng.Text);
             save.setDest(TextboxDestinationEng.Text);
+            DirectoryInfo disource = new DirectoryInfo(TextboxSourceEng.Text);
+            save.setSize(save.calculateFolderSize(disource));
             saveList.Add(save);
+            if (i < count)
+            {
+                if (i != 0)
+                {
+                    if (saveList[i - 1].Size > 1000000000 && saveList[i].Size > 1000000000)
+                    {
+                        MessageBox.Show("Save trop lourde");
+                        Environment.Exit(0);
+                    }
+                }
+
+            }
             TextboxSourceEng.Text = "";
             TextboxDestinationEng.Text = "";
+            count++;
         }
-
 
 
         /*private void Button_Click_4(object sender, RoutedEventArgs e)

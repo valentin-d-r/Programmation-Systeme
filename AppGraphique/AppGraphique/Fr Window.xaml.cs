@@ -148,8 +148,6 @@ namespace AppGraphique
 
                 for (int j = 0; j < threadList.Count; j++)
                 {
-
-
                             threadList[j].Start();
                 }
 
@@ -163,6 +161,7 @@ namespace AppGraphique
             save.set_ext(listExt);
             save.setName(tbSelectSomeTextFR.Text);
             save.setSource(TextboxSourceFR.Text);
+            save.setDest(TextboxDestinationFR.Text);
             DirectoryInfo disource = new DirectoryInfo(TextboxSourceFR.Text);
             save.setSize(save.calculateFolderSize(disource));
             saveList.Add(save);
