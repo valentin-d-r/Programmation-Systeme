@@ -6,7 +6,6 @@ C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphiqu
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\AppGraphique.pdb
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\Ookii.Dialogs.Wpf.dll
-C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.csproj.AssemblyReference.cache
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Eng Window.g.cs
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\Fr Window.g.cs
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\MainWindow.g.cs
@@ -27,6 +26,7 @@ C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphiqu
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.dll
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.pdb
 C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.genruntimeconfig.cache
+<<<<<<< Updated upstream
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\AppGraphique.exe
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\AppGraphique.deps.json
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\bin\Debug\netcoreapp3.1\AppGraphique.runtimeconfig.json
@@ -56,3 +56,6 @@ C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.dll
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.pdb
 C:\Users\Draugar\Desktop\C#\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.genruntimeconfig.cache
+=======
+C:\Users\Aymerick\Desktop\ProgSys\Programmation-Systeme\AppGraphique\AppGraphique\obj\Debug\netcoreapp3.1\AppGraphique.csproj.AssemblyReference.cache
+>>>>>>> Stashed changes

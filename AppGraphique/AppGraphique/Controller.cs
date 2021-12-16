@@ -21,6 +21,7 @@ namespace AppGraphique
         private SaveModel model;
         private Log logModel;
         private LogState logStateModel;
+        private static Mutex mutex = new Mutex();
 
 
         public Controller()
@@ -32,10 +33,10 @@ namespace AppGraphique
 
         public void updateSaveInfo(SaveModel save)
         {
+            mutex.WaitOne(); // Allows you to control access to the Log and LogStates resource. Allows each thread to be entered 1 by 1.
             model.Name = save.Name;
             model.Source = save.Source;
             model.Dest = save.Dest;
-
             model.createSave(save);
 
             logModel.Name = model.Name;
@@ -54,7 +55,7 @@ namespace AppGraphique
             logStateModel.Date = model.time_now();
             logStateModel.State = model.State;
             logStateModel.createLogState(logStateModel);
-
+            mutex.ReleaseMutex(); // Resource release 
 
         }
     }

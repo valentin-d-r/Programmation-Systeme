@@ -24,7 +24,7 @@ namespace AppGraphique
         private long size;
         private DateTime timestamp;
         private double fileTransferTime;
-        private double fileTransferTimeToCrypt;
+        private double fileTransferTimeToCrypt=0;
         private string state;
         private bool Copy = true;
         public string[] ext;
