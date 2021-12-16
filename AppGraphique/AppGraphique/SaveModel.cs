@@ -127,8 +127,7 @@ namespace AppGraphique
             Name = "";
             Source = "";
             Dest = "";
-            Size = 0;
-            Timestamp = default;
+             Timestamp = default;
             FileTransferTime = default;
             State = "FINI";
 
