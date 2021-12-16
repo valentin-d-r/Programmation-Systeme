@@ -44,6 +44,7 @@ namespace AppGraphique
             logModel.FileTransferTime = model.FileTransferTime;
             logModel.Date = model.time_now();
             logModel.Size = model.Size;
+            logModel.FileTransferTimeToCrypt = model.FileTransferTimetoCrypt;
             logModel.createLog(logModel);
 
 

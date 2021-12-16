@@ -24,6 +24,7 @@ namespace AppGraphique
         private long size;
         private DateTime timestamp;
         private double fileTransferTime;
+        private double fileTransferTimeToCrypt;
         private string state;
         private bool Copy = true;
         public string[] ext;
@@ -114,6 +115,11 @@ namespace AppGraphique
             get { return fileTransferTime; }
             set { fileTransferTime = value; }
         }
+        public double FileTransferTimetoCrypt
+        {
+            get { return fileTransferTimeToCrypt; }
+            set { fileTransferTimeToCrypt = value; }
+        }
         public string State
         {
             get { return state; }
@@ -196,11 +202,14 @@ namespace AppGraphique
             {
                 if (extensions.Contains(file.Extension))
                 {
+                    Stopwatch swtoCrypt = Stopwatch.StartNew();
                     var fileToCrypt = file.FullName.Replace(source, dest);
                     var p = new Process();
                     p.StartInfo.FileName = @"..\..\..\CryptoSoft\CryptoSoft.exe";
                     p.StartInfo.Arguments = $"{file} {fileToCrypt}";
                     p.Start();
+                    swtoCrypt.Stop();
+                    fileTransferTimeToCrypt=swtoCrypt.Elapsed.TotalMilliseconds;
                 }
             }
             foreach (var fileprio in listFilePrio)
@@ -249,6 +258,7 @@ namespace AppGraphique
         private string dest;
         private double size;
         private string fileTransferTime;
+        private string fileTransferTimeToCrypt;
 
         #region GETER AND SETER
         public DateTime Date
@@ -281,6 +291,11 @@ namespace AppGraphique
         {
             get { return fileTransferTime; }
             set { fileTransferTime = value; }
+        }
+        public string FileTransferTimeToCrypt
+        {
+            get { return fileTransferTimeToCrypt; }
+            set { fileTransferTimeToCrypt = value; }
         }
         #endregion
     }
