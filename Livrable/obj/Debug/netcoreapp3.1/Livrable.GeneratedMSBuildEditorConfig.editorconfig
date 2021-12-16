@@ -1,3 +1,11 @@
 is_global = true
 build_property.RootNamespace = Livrable
+<<<<<<< HEAD
+<<<<<<< HEAD
 build_property.ProjectDir = /Users/aymerick/Desktop/Reste/Programmation-Systeme/Livrable/
+=======
+build_property.ProjectDir = C:\Users\Draugar\Desktop\C#\Programmation-Systeme\Livrable\
+>>>>>>> WPF
+=======
+build_property.ProjectDir = C:\Users\33624\Documents\GitHub\Programmation-Systeme\Livrable\
+>>>>>>> ChangeProjectForm

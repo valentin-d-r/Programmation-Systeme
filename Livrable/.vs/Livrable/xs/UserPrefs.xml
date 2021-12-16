@@ -1,26 +1,30 @@
 ﻿<Properties StartupConfiguration="{AE2AB937-A83E-41F0-801C-7C2AE6690218}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="0To5.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Model.cs">
     <Files>
-      <File FileName="Program.cs" Line="16" Column="1" />
+      <File FileName="Program.cs" Line="13" Column="1" />
       <File FileName="WriteLog.cs" />
       <File FileName="Save.cs" />
       <File FileName="EnumStates.cs" />
-      <File FileName="TemplateSave.cs" />
+      <File FileName="TemplateSave.cs" Line="55" Column="17" />
       <File FileName="CalculTime.cs" />
       <File FileName="CalculLenght.cs" />
       <File FileName="JsonTry.cs" />
       <File FileName="WriteLogsStates.cs" />
       <File FileName="Livrable.csproj" />
       <File FileName="JSONStates.cs" />
-      <File FileName="0To5.cs" Line="77" Column="52" />
+      <File FileName="Controller.cs" Line="44" Column="1" />
+      <File FileName="../../../../../../usr/local/share/dotnet/sdk/6.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" Line="267" Column="5" />
+      <File FileName="View.cs" Line="79" Column="10" />
+      <File FileName="ViewLog.cs" Line="1" Column="1" />
+      <File FileName="ViewLogState.cs" Line="1" Column="1" />
+      <File FileName="Model.cs" Line="91" Column="33" />
+      <File FileName="IController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Livrable" expanded="True">
-            <Node name="Livrable" expanded="True">
-              <Node name="0To5.cs" selected="True" />
-            </Node>
+            <Node name="Livrable" expanded="True" />
           </Node>
         </State>
       </Pad>

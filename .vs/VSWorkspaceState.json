@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Livrable",
+    "\\View",
+    "\\ViewModel"
   ],
-  "SelectedNode": "\\GITSOLUTION.sln",
+  "SelectedNode": "\\View\\Class1.cs",
   "PreviewInSolutionExplorer": false
 }

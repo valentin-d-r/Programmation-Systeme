@@ -1,0 +1,28 @@
+﻿<Window x:Class="AppGraphique.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppGraphique"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid Margin="0,-51,0,0" RenderTransformOrigin="0.504,0.526" Background="#FF262626">
+        <Button Content="Sauvegarder" HorizontalAlignment="Left" Margin="417,359,0,0" VerticalAlignment="Top" Height="48" Width="134" Background="#FF262626" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" Click="Button_Click_3" BorderBrush="#FF262626"/>
+        <TextBox x:Name="tbSelectSomeTextFR" HorizontalAlignment="Left" Margin="230,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FF515050" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold" TextChanged="TextBox_TextChanged" BorderBrush="#FF262626"/>
+        <TextBox x:Name="TextboxSourceFR" HorizontalAlignment="Left" Margin="230,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="48" Background="#FF505050" Foreground="#FFCEDBFE" FontWeight="Bold" FontSize="16"/>
+        <TextBox x:Name="TextboxDestinationFR" HorizontalAlignment="Left" Margin="230,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="350" Height="48"  Background="#FF50504E" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="Source3Points" Content="..." HorizontalAlignment="Left" Margin="605,165,0,0" VerticalAlignment="Top" Width="21" Background="White" Foreground="Black" Click="Button_Click" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="DestinationPath" Content="..." HorizontalAlignment="Left" Margin="605,0,0,0" VerticalAlignment="Center" Width="21" Background="White" Foreground="Black" Click="DestinationPath_Click" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Appelation" HorizontalAlignment="Left" Margin="82,72,0,0" VerticalAlignment="Top" Height="48" Width="104" Foreground="#FFCEDBFE" Background="#FF262626" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Source" HorizontalAlignment="Left" Margin="82,144,0,0" VerticalAlignment="Top" Height="48" Width="104" Foreground="#FFCEDBFE" Background="#FF262626" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Destination" HorizontalAlignment="Left" Margin="82,0,0,0" VerticalAlignment="Center" Height="48" Width="103" Foreground="#FFCEDBFE" Background="#FF262623" FontSize="16" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="99" Margin="701,50,0,0" VerticalAlignment="Top" Width="99" Source="/Image1.png"/>
+        <Button Content="Revenir au menu" HorizontalAlignment="Left" Margin="616,361,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="44" Width="134" Foreground="#FFCEDBFE" Background="#FF262626" FontSize="16" FontWeight="Bold" BorderBrush="#FF262626"/>
+        <Button x:Name="ChangeExtensions" Content="Extensions" HorizontalAlignment="Left" Margin="683,410,0,0" VerticalAlignment="Top" Click="Button_Click_2" Height="37" Width="97" FontSize="16" BorderBrush="#FF262629" Foreground="#FFCEDBFE" Background="#FF262626"/>
+        <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="0" Margin="34,393,0,0" VerticalAlignment="Top" Width="138"/>
+        <Button Content="Prioritaire" HorizontalAlignment="Left" Margin="82,406,0,0" VerticalAlignment="Top" Click="Button_Click_5" Background="#FF262626" BorderBrush="#FF262626" Foreground="#FFCEDBFE" Height="46" Width="96" FontSize="16" FontWeight="Normal" Visibility="Hidden"/>
+        <Button x:Name="ButtonAdd" Content="Ajouter" HorizontalAlignment="Left" Margin="298,359,0,0" VerticalAlignment="Top" Height="48" Width="68" Click="ButtonAdd_Click" Background="#FF262626" BorderBrush="#FF262626" Foreground="#FFCEDBFE" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="TextboxExt" HorizontalAlignment="Left" Margin="230,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="47" TextChanged="TextBox_TextChanged" FontSize="20" RenderTransformOrigin="0.496,1.468" Background="#FF50504E" Foreground="#FFCEDBFE"/>
+        <Label Content="Extensions &#xD;&#xA;Prioritaire" HorizontalAlignment="Left" Margin="82,286,0,0" VerticalAlignment="Top" Height="58" Width="113" OpacityMask="Black" Foreground="#FFCEDBFE" Background="#FF262623" FontSize="16" FontWeight="Bold"/>
+    </Grid>
+</Window>

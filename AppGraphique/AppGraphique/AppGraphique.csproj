@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ENG Flag.jpg" />
+    <None Remove="ENG Flag.png" />
+    <None Remove="FR Flag.png" />
+    <None Remove="Image1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="ENG Flag.jpg" />
+    <Resource Include="ENG Flag.png" />
+    <Resource Include="FR Flag.png" />
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+
+</Project>
